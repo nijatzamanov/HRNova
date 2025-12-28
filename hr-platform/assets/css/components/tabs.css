@@ -1,0 +1,146 @@
+/* tabs.css - Tabs Component */
+
+/* VERTICAL TABS (köhnə sistem - sidebar kimi) */
+.tabs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.tabs__list {
+    display: flex;
+    gap: var(--space-2);
+    border-bottom: 2px solid var(--color-border);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.tabs__tab {
+    padding: var(--space-3) var(--space-5);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-muted);
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+    margin-bottom: -2px;
+    position: relative;
+}
+
+.tabs__tab:hover {
+    color: var(--color-text);
+    background: var(--color-bg-subtle);
+}
+
+.tabs__tab--active {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+    font-weight: var(--font-weight-semibold);
+    background: transparent;
+}
+
+.tabs__panel {
+    display: none;
+}
+
+.tabs__panel--active {
+    display: block;
+    animation: tabFadeIn 200ms ease;
+}
+
+/* PAGE TABS (YENİ - şəkil 1 kimi horizontal tabs) */
+.page-tabs {
+    display: flex;
+    gap: var(--space-2);
+    border-bottom: 2px solid var(--color-border);
+    margin-bottom: var(--space-6);
+    overflow-x: auto;
+    -webkit-overflow-scrolling:  touch;
+    scrollbar-width: none;
+}
+
+.page-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.page-tabs__tab {
+    padding: var(--space-4) var(--space-6);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-muted);
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+    margin-bottom: -2px;
+    position: relative;
+}
+
+.page-tabs__tab:hover {
+    color:  var(--color-text);
+    background: var(--color-bg-subtle);
+    border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.page-tabs__tab--active {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+    font-weight: var(--font-weight-semibold);
+    background: transparent;
+}
+
+.page-tabs__tab--active::after {
+    content: '';
+    position: absolute;
+    bottom:  -2px;
+    left: 0;
+    right: 0;
+    height:  2px;
+    background:  var(--color-primary);
+    border-radius: var(--radius-full);
+}
+
+/* TAB CONTENT CONTAINER */
+.page-tab-content {
+    position: relative;
+    min-height: 400px;
+}
+
+.page-tab-panel {
+    display: none;
+}
+
+.page-tab-panel--active {
+    display: block;
+    animation: tabFadeIn 250ms ease;
+}
+
+@keyframes tabFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width:  767px) {
+    .tabs__list,
+    .page-tabs {
+        gap: var(--space-1);
+    }
+
+    .tabs__tab,
+    .page-tabs__tab {
+        padding: var(--space-3) var(--space-4);
+        font-size: var(--font-size-xs);
+    }
+}

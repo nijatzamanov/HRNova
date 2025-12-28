@@ -1,0 +1,391 @@
+{
+  "app": {
+    "name": "HRNova",
+    "title": "Human Resources Management System"
+  },
+  "menu": {
+    "dashboard": "Dashboard",
+    "users": "Users",
+    "company": "Company",
+    "employees": "Employees",
+    "migration": "Migration",
+    "leave": "Leave",
+    "attendance": "Attendance",
+    "reports": "Reports",
+    "announcements": "Announcements",
+    "settings": "Settings",
+    "updates": "Updates",
+    "logout": "Logout"
+  },
+  "common": {
+    "add": "Add",
+    "edit": "Edit",
+    "delete": "Delete",
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "search": "Search",
+    "filter": "Filter",
+    "export": "Export",
+    "import": "Import",
+    "view": "View",
+    "actions": "Actions",
+    "status": "Status",
+    "active": "Active",
+    "inactive": "Inactive",
+    "pending": "Pending",
+    "approved": "Approved",
+    "rejected": "Rejected",
+    "loading": "Loading...",
+    "noData": "No data available",
+    "confirm": "Confirm",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "reset": "Reset",
+    "refresh": "Refresh",
+    "download": "Download",
+    "upload": "Upload",
+    "select": "Select",
+    "all": "All",
+    "none": "None",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "table": {
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "position": "Position",
+    "department": "Department",
+    "joinDate": "Join Date",
+    "status": "Status",
+    "actions": "Actions",
+    "employee": "Employee",
+    "showing": "Showing {from}-{to} of {total}",
+    "noRecords": "No records found"
+  },
+  "form": {
+    "fullName": "Full Name",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "phone": "Phone",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "position": "Position",
+    "department": "Department",
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "description": "Description",
+    "notes": "Notes",
+    "required": "Required",
+    "optional": "Optional",
+    "selectDepartment": "Select department",
+    "selectPosition": "Select position",
+    "selectStatus": "Select status",
+    "enterEmail": "Enter email address",
+    "enterName": "Enter full name",
+    "enterPhone": "Enter phone number"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome back! Here's an overview of your HR operations.",
+    "totalEmployees": "Total Employees",
+    "activeJobs": "Active Jobs",
+    "pendingLeaves": "Pending Leaves",
+    "newApplicants": "New Applicants",
+    "recentActivity": "Recent Activity",
+    "recentHires": "Recent Hires",
+    "upcomingEvents": "Upcoming Events",
+    "vsLastMonth": "vs last month"
+  },
+  "employees": {
+    "title": "Employees",
+    "description": "Manage your organization's employee directory and information.",
+    "addEmployee": "Add Employee",
+    "employeeDirectory": "Employee Directory",
+    "allEmployees": "All employees in your organization",
+    "searchEmployees": "Search employees...",
+    "allDepartments": "All Departments",
+    "onLeave": "On Leave",
+    "employeeId": "Employee ID",
+    "stats": {
+      "total": "Total Employees",
+      "active": "Active",
+      "onLeave": "On Leave",
+      "inactive": "Inactive"
+    },
+    "tabs": {
+      "overview": "Overview",
+      "job": "Job Details",
+      "documents": "Documents",
+      "notes": "Notes"
+    },
+    "sections": {
+      "personalInfo": "Personal Information",
+      "jobInfo": "Job Information",
+      "compensation": "Compensation",
+      "documents": "Documents",
+      "notes": "Notes"
+    },
+    "fields": {
+      "employeeId": "Employee ID",
+      "fullName": "Full Name",
+      "email": "Email",
+      "phone": "Phone",
+      "birthDate": "Birth Date",
+      "gender": "Gender",
+      "nationality": "Nationality",
+      "passport": "Passport Number",
+      "address": "Address",
+      "emergencyContact": "Emergency Contact",
+      "position": "Position",
+      "department": "Department",
+      "branch": "Branch",
+      "manager": "Manager",
+      "joinDate": "Join Date",
+      "contractType": "Contract Type",
+      "workType": "Work Type",
+      "status": "Status",
+      "salary": "Salary",
+      "currency": "Currency"
+    },
+    "documents": {
+      "empty": {
+        "title": "No documents uploaded",
+        "description": "Documents and files will appear here."
+      }
+    },
+    "notes": {
+      "empty": {
+        "title": "No notes available",
+        "description": "Add notes to keep track of important information."
+      }
+    }
+  },
+  "leave": {
+    "title": "Leave Management",
+    "description": "Manage employee leave requests and balances.",
+    "balance": {
+      "annual": "Annual Leave",
+      "sick": "Sick Leave",
+      "pending": "Pending Requests",
+      "approved": "Approved This Month",
+      "daysAvailable": "days available"
+    },
+    "calendar": {
+      "title": "Team Calendar"
+    },
+    "request": {
+      "title": "Request Leave",
+      "submit": "Submit Request"
+    }
+  },
+  "attendance": {
+    "title": "Attendance",
+    "description": "Track and manage employee attendance records.",
+    "stats": {
+      "present": "Present Today",
+      "late": "Late Arrivals",
+      "absent": "Absent",
+      "avgWorkHours": "Avg Work Hours"
+    },
+    "anomalies": {
+      "title": "Anomalies"
+    },
+    "schedule": {
+      "title": "Shift Schedule"
+    }
+  },
+  "migration": {
+    "title": "Migration Cases",
+    "description": "Track work permits and visa expiry dates.",
+    "stats": {
+      "expiringSoon": "Expiring Soon",
+      "next30Days": "next 30 days",
+      "upcomingRenewals": "Upcoming Renewals",
+      "next60Days": "next 60 days",
+      "active": "Active Documents",
+      "expired": "Expired"
+    },
+    "reminders": {
+      "title": "Reminder Settings",
+      "firstNotice": "First Notice",
+      "secondNotice": "Second Notice",
+      "finalNotice": "Final Notice",
+      "daysBefore": "days before",
+      "emailNotifications": "Email Notifications",
+      "dashboardAlerts": "Dashboard Alerts",
+      "save": "Save Settings"
+    }
+  },
+  "users": {
+    "title": "Users & Permissions",
+    "description": "Manage system users, roles, and permissions.",
+    "stats": {
+      "total": "Total Users",
+      "active": "Active",
+      "admins": "Administrators",
+      "inactive": "Inactive"
+    },
+    "roles": {
+      "title": "Roles & Permissions"
+    }
+  },
+  "company": {
+    "title": "Company Settings",
+    "description": "Manage departments, branches, schedules, and holidays.",
+    "departments": {
+      "title": "Departments"
+    },
+    "branches": {
+      "title": "Branches"
+    },
+    "schedules": {
+      "title": "Work Schedules"
+    },
+    "holidays": {
+      "title": "Company Holidays"
+    }
+  },
+  "announcements": {
+    "title": "Announcements",
+    "description": "Communicate with your team through announcements."
+  },
+  "reports": {
+    "title": "Reports & Analytics",
+    "description": "Generate and export comprehensive HR reports.",
+    "headcount": {
+      "title": "Headcount Report",
+      "description": "Total employees by department and branch"
+    },
+    "attendance": {
+      "title": "Attendance Report",
+      "description": "Daily attendance and work hours summary"
+    },
+    "leave": {
+      "title": "Leave Report",
+      "description": "Leave balances and usage by employee"
+    },
+    "payroll": {
+      "title": "Payroll Summary",
+      "description": "Monthly payroll costs and breakdown"
+    },
+    "turnover": {
+      "title": "Turnover Analysis",
+      "description": "Employee retention and turnover rates"
+    },
+    "migration": {
+      "title": "Migration Report",
+      "description": "Document expiry and renewal status"
+    },
+    "export": {
+      "title": "Export Center",
+      "format": "Export Format",
+      "dateRange": "Date Range",
+      "button": "Export Report"
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "description": "Configure system preferences and notifications.",
+    "general": {
+      "title": "General Settings",
+      "language": "Language",
+      "languageHelp": "Select your preferred interface language",
+      "timezone": "Timezone",
+      "dateFormat": "Date Format",
+      "timeFormat": "Time Format",
+      "save": "Save Changes"
+    },
+    "branding": {
+      "title": "Branding",
+      "companyName": "Company Name",
+      "logo": "Company Logo",
+      "primaryColor": "Primary Color",
+      "save": "Save Changes"
+    },
+    "notifications": {
+      "title": "Notifications",
+      "email": "Email Notifications",
+      "leaveRequests": "Leave requests",
+      "announcements": "Announcements",
+      "documentExpiry": "Document expiry alerts",
+      "weeklyDigest": "Weekly digest",
+      "push": "Push Notifications",
+      "browser": "Browser notifications",
+      "mobile": "Mobile notifications",
+      "save": "Save Changes"
+    },
+    "security": {
+      "title": "Security",
+      "passwordPolicy": "Password Policy",
+      "sessionTimeout": "Session Timeout",
+      "twoFactor": "Require two-factor authentication",
+      "ipWhitelist": "IP whitelist restrictions",
+      "save": "Save Changes"
+    }
+  },
+  "updates": {
+    "title": "Updates & Changelog",
+    "description": "Stay informed about new features and improvements.",
+    "feedback": {
+      "title": "Send Feedback",
+      "type": "Feedback Type",
+      "message": "Message",
+      "contact": "Allow us to contact you",
+      "submit": "Submit Feedback"
+    },
+    "version": {
+      "title": "System Info",
+      "current": "Current Version",
+      "released": "Released",
+      "upToDate": "Status"
+    }
+  },
+  "language": {
+    "select": "Select Language",
+    "az": "Azərbaycanca",
+    "en": "English",
+    "ru": "Русский",
+    "tr": "Türkçe",
+    "de": "Deutsch"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "employees": "Employees",
+    "attendance": "Attendance",
+    "leave": "Leave Management",
+    "migration": "Migration Cases",
+    "users": "Users",
+    "company": "Company",
+    "announcements": "Announcements",
+    "reports": "Reports",
+    "settings": "Settings",
+    "updates": "Updates",
+    "logout": "Logout"
+  },
+  "topbar": {
+    "addEmployee": "Add Employee"
+  },
+  "notifications": {
+    "success": "Success",
+    "error": "Error",
+    "warning": "Warning",
+    "info": "Info",
+    "title": "Notifications",
+    "markAllRead": "Mark all as read",
+    "viewAll": "View all notifications"
+  },
+  "messages": {
+    "title": "Messages",
+    "viewAll": "View all messages"
+  },
+  "profile": {
+    "myProfile": "My Profile",
+    "settings": "Settings",
+    "logout": "Logout"
+  }
+}

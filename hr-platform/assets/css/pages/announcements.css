@@ -1,0 +1,93 @@
+.announcements-feed {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.announcement-card {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    transition: all var(--transition-fast);
+}
+
+.announcement-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.announcement-card--high {
+    border-left: 4px solid var(--color-danger);
+}
+
+.announcement-card--normal {
+    border-left: 4px solid var(--color-primary);
+}
+
+.announcement-card--low {
+    border-left: 4px solid var(--color-text-muted);
+}
+
+.announcement-card__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-4);
+    margin-bottom: var(--space-4);
+}
+
+.announcement-card__title-group {
+    flex: 1;
+}
+
+.announcement-card__title {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--space-2);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.announcement-card__meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.announcement-card__actions {
+    display: flex;
+    gap: var(--space-2);
+}
+
+.announcement-card__message {
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    color: var(--color-text);
+    margin-bottom: var(--space-4);
+    white-space: pre-wrap;
+}
+
+.announcement-card__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-border);
+}
+
+.announcement-card__author {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.announcement-card__author-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-full);
+}

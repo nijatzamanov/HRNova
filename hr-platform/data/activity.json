@@ -1,0 +1,42 @@
+[
+  {
+    "id":  "act001",
+    "type": "employee_added",
+    "title": "New employee added",
+    "description": "Leyla Əhmədova joined as Frontend Developer",
+    "timestamp": "2025-12-18T09:30:00Z",
+    "icon": "user-plus"
+  },
+  {
+    "id": "act002",
+    "type": "leave_approved",
+    "title":  "Leave request approved",
+    "description": "Ayşe Əliyeva's vacation request was approved",
+    "timestamp": "2025-12-18T08:15:00Z",
+    "icon": "check-circle"
+  },
+  {
+    "id": "act003",
+    "type": "document_uploaded",
+    "title":  "Document uploaded",
+    "description": "New company policy uploaded to Documents",
+    "timestamp": "2025-12-17T16:45:00Z",
+    "icon": "file"
+  },
+  {
+    "id": "act004",
+    "type": "announcement_created",
+    "title": "New announcement",
+    "description": "Holiday schedule for 2026 announced",
+    "timestamp":  "2025-12-17T14:20:00Z",
+    "icon": "megaphone"
+  },
+  {
+    "id":  "act005",
+    "type": "employee_updated",
+    "title": "Employee profile updated",
+    "description": "Rəşad Quliyev's contact information updated",
+    "timestamp":  "2025-12-17T11:00:00Z",
+    "icon": "edit"
+  }
+]

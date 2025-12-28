@@ -1,0 +1,31 @@
+{
+  "employees": [
+    {
+      "id": "emp-001",
+      "name": "John Doe",
+      "email": "john.doe@company.com",
+      "position": "Senior Developer",
+      "department": "Engineering",
+      "joinDate": "2023-01-15",
+      "status": "active"
+    },
+    {
+      "id": "emp-002",
+      "name": "Jane Smith",
+      "email": "jane.smith@company.com",
+      "position": "Product Manager",
+      "department": "Product",
+      "joinDate": "2023-03-22",
+      "status": "active"
+    },
+    {
+      "id": "emp-003",
+      "name": "Mike Johnson",
+      "email": "mike.johnson@company.com",
+      "position": "UX Designer",
+      "department": "Design",
+      "joinDate": "2023-06-10",
+      "status": "on-leave"
+    }
+  ]
+}

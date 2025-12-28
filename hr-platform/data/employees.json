@@ -1,0 +1,57 @@
+[
+  {
+    "id":  "emp001",
+    "name": "Ayşe Əliyeva",
+    "email": "ayse.aliyeva@company.com",
+    "phone":  "+994 50 123 4567",
+    "position": "Senior Software Engineer",
+    "department":  "engineering",
+    "hireDate":  "2022-01-15",
+    "status": "active",
+    "avatar": "./assets/img/placeholders/avatar.svg"
+  },
+  {
+    "id": "emp002",
+    "name": "Elvin Məmmədov",
+    "email": "elvin.mammadov@company.com",
+    "phone": "+994 55 234 5678",
+    "position": "HR Manager",
+    "department": "hr",
+    "hireDate": "2021-06-10",
+    "status":  "active",
+    "avatar":  "./assets/img/placeholders/avatar.svg"
+  },
+  {
+    "id": "emp003",
+    "name":  "Nigar Həsənova",
+    "email": "nigar.hasanova@company.com",
+    "phone": "+994 70 345 6789",
+    "position": "Marketing Specialist",
+    "department": "marketing",
+    "hireDate": "2023-03-20",
+    "status": "active",
+    "avatar": "./assets/img/placeholders/avatar.svg"
+  },
+  {
+    "id": "emp004",
+    "name": "Rəşad Quliyev",
+    "email": "rashad.guliyev@company.com",
+    "phone": "+994 51 456 7890",
+    "position": "Sales Manager",
+    "department": "sales",
+    "hireDate": "2020-09-05",
+    "status": "active",
+    "avatar": "./assets/img/placeholders/avatar.svg"
+  },
+  {
+    "id": "emp005",
+    "name": "Leyla Əhmədova",
+    "email":  "leyla.ahmadova@company.com",
+    "phone": "+994 77 567 8901",
+    "position": "Frontend Developer",
+    "department": "engineering",
+    "hireDate": "2023-07-12",
+    "status": "active",
+    "avatar": "./assets/img/placeholders/avatar.svg"
+  }
+]

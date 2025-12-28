@@ -1,0 +1,44 @@
+[
+  {
+    "id": "dept001",
+    "name": "Engineering",
+    "slug": "engineering",
+    "head": "emp001",
+    "employeeCount": 12
+  },
+  {
+    "id": "dept002",
+    "name": "Human Resources",
+    "slug": "hr",
+    "head": "emp002",
+    "employeeCount": 3
+  },
+  {
+    "id": "dept003",
+    "name": "Marketing",
+    "slug": "marketing",
+    "head": "emp003",
+    "employeeCount": 5
+  },
+  {
+    "id": "dept004",
+    "name": "Sales",
+    "slug": "sales",
+    "head": "emp004",
+    "employeeCount": 8
+  },
+  {
+    "id": "dept005",
+    "name": "Finance",
+    "slug": "finance",
+    "head": null,
+    "employeeCount":  4
+  },
+  {
+    "id":  "dept006",
+    "name": "Operations",
+    "slug": "operations",
+    "head": null,
+    "employeeCount": 6
+  }
+]

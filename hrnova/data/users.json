@@ -1,0 +1,72 @@
+[
+  {
+    "id": "u001",
+    "username": "admin",
+    "email": "admin@hrnova.az",
+    "firstName": "Əli",
+    "lastName": "Məmmədov",
+    "role": "admin",
+    "permissions": ["users:read", "users:write", "users:delete", "employees:read", "employees:write", "employees:delete", "company:read", "company:write", "reports:read", "reports:write", "settings:read", "settings:write"],
+    "avatar": null,
+    "phone": "+994505551234",
+    "status": "active",
+    "lastLogin": "2024-12-26T10:30:00Z",
+    "createdAt": "2024-01-15T08:00:00Z"
+  },
+  {
+    "id": "u002",
+    "username": "hr.manager",
+    "email": "hr.manager@hrnova.az",
+    "firstName": "Leyla",
+    "lastName": "Həsənova",
+    "role": "hr_manager",
+    "permissions": ["employees:read", "employees:write", "company:read", "reports:read", "leave:read", "leave:write", "attendance:read", "attendance:write"],
+    "avatar": null,
+    "phone": "+994505552345",
+    "status": "active",
+    "lastLogin": "2024-12-26T09:15:00Z",
+    "createdAt": "2024-02-10T08:00:00Z"
+  },
+  {
+    "id": "u003",
+    "username": "recruiter1",
+    "email": "recruiter@hrnova.az",
+    "firstName": "Ramil",
+    "lastName": "Quliyev",
+    "role": "recruiter",
+    "permissions": ["employees:read", "company:read", "migration:read", "migration:write"],
+    "avatar": null,
+    "phone": "+994505553456",
+    "status": "active",
+    "lastLogin": "2024-12-25T16:45:00Z",
+    "createdAt": "2024-03-05T08:00:00Z"
+  },
+  {
+    "id": "u004",
+    "username": "employee1",
+    "email": "employee1@hrnova.az",
+    "firstName": "Nigar",
+    "lastName": "Əliyeva",
+    "role": "employee",
+    "permissions": ["employees:read", "leave:read", "attendance:read"],
+    "avatar": null,
+    "phone": "+994505554567",
+    "status": "active",
+    "lastLogin": "2024-12-26T08:00:00Z",
+    "createdAt": "2024-04-20T08:00:00Z"
+  },
+  {
+    "id": "u005",
+    "username": "viewer1",
+    "email": "viewer@hrnova.az",
+    "firstName": "Tural",
+    "lastName": "İsmayılov",
+    "role": "viewer",
+    "permissions": ["employees:read", "company:read", "reports:read"],
+    "avatar": null,
+    "phone": "+994505555678",
+    "status": "active",
+    "lastLogin": "2024-12-24T14:20:00Z",
+    "createdAt": "2024-05-15T08:00:00Z"
+  }
+]

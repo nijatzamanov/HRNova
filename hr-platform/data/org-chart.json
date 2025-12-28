@@ -1,0 +1,234 @@
+{
+  "employees": [
+    {
+      "id": "1",
+      "name": "Jeffrey P.  Bezos",
+      "title": "President & CEO",
+      "department":  "Executive",
+      "email":  "jeffrey.bezos@company.com",
+      "phone":  "+1 (555) 001-0001",
+      "avatar": "https://i.pravatar.cc/150?img=12",
+      "managerId": null
+    },
+    {
+      "id": "2",
+      "name": "Andrew R. Jassy",
+      "title": "CEO of Amazon Web Services",
+      "department": "Cloud Services",
+      "email": "andrew.jassy@company.com",
+      "phone": "+1 (555) 001-0002",
+      "avatar": "https://i.pravatar.cc/150?img=13",
+      "managerId": "1"
+    },
+    {
+      "id": "3",
+      "name": "David H. Clark",
+      "title": "CEO of Worldwide Consumer",
+      "department": "Operations",
+      "email": "david.clark@company.com",
+      "phone": "+1 (555) 001-0003",
+      "avatar": "https://i.pravatar.cc/150?img=33",
+      "managerId": "1"
+    },
+    {
+      "id": "4",
+      "name": "Mike Hopkins",
+      "title": "SVP, Amazon Studios",
+      "department": "Product",
+      "email": "mike. hopkins@company.com",
+      "phone": "+1 (555) 001-0004",
+      "avatar": "https://i.pravatar.cc/150? img=14",
+      "managerId": "1"
+    },
+    {
+      "id": "5",
+      "name": "David Limp",
+      "title": "SVP, Devices and Services",
+      "department": "Engineering",
+      "email": "david.limp@company.com",
+      "phone": "+1 (555) 001-0005",
+      "avatar": "https://i.pravatar.cc/150?img=15",
+      "managerId": "1"
+    },
+    {
+      "id": "6",
+      "name": "Brian T.  Olsavsky",
+      "title":  "SVP & CFO",
+      "department": "Finance",
+      "email": "brian.olsavsky@company.com",
+      "phone":  "+1 (555) 001-0006",
+      "avatar": "https://i.pravatar.cc/150?img=56",
+      "managerId": "1"
+    },
+    {
+      "id": "7",
+      "name": "David A. Zapolsky",
+      "title":  "SVP, General Counsel",
+      "department":  "Legal",
+      "email":  "david.zapolsky@company.com",
+      "phone":  "+1 (555) 001-0007",
+      "avatar": "https://i.pravatar.cc/150?img=59",
+      "managerId": "1"
+    },
+    {
+      "id": "8",
+      "name": "Jay Carney",
+      "title": "SVP, Corporate Affairs",
+      "department": "Corporate Affairs",
+      "email": "jay.carney@company.com",
+      "phone": "+1 (555) 001-0008",
+      "avatar": "https://i.pravatar.cc/150?img=52",
+      "managerId": "1"
+    },
+    {
+      "id": "9",
+      "name": "Paul Kotas",
+      "title": "SVP, Worldwide Advertising",
+      "department": "Marketing",
+      "email": "paul.kotas@company.com",
+      "phone": "+1 (555) 001-0009",
+      "avatar": "https://i.pravatar.cc/150?img=53",
+      "managerId": "1"
+    },
+    {
+      "id": "10",
+      "name": "Keith B. Alexander",
+      "title": "SVP, Human Resources",
+      "department": "HR",
+      "email": "keith.alexander@company.com",
+      "phone": "+1 (555) 001-0010",
+      "avatar": "https://i.pravatar.cc/150?img=51",
+      "managerId": "7"
+    },
+    {
+      "id": "11",
+      "name": "John Connors",
+      "title": "Executive Assistant to the CEO",
+      "department": "Executive",
+      "email": "john. connors@company.com",
+      "phone": "+1 (555) 001-0011",
+      "avatar": "https://i.pravatar.cc/150?img=32",
+      "managerId": "8"
+    },
+    {
+      "id": "12",
+      "name": "Austin McDaniel",
+      "title": "Founder & CEO",
+      "department":  "Executive",
+      "email": "austin.mcdaniel@company. com",
+      "phone": "+1 (555) 002-0001",
+      "avatar": "https://i.pravatar.cc/150?img=68",
+      "managerId": null
+    },
+    {
+      "id":  "13",
+      "name":  "Rob Anderson",
+      "title": "vCRO & Advisor",
+      "department": "Sales",
+      "email": "rob.anderson@company.com",
+      "phone": "+1 (555) 002-0002",
+      "avatar": "https://i.pravatar.cc/150?img=67",
+      "managerId": "12"
+    },
+    {
+      "id": "14",
+      "name": "Kyle Chaplin",
+      "title": "Lead Designer",
+      "department": "Design",
+      "email": "kyle.chaplin@company.com",
+      "phone": "+1 (555) 002-0003",
+      "avatar": "https://i.pravatar.cc/150?img=27",
+      "managerId": "12"
+    },
+    {
+      "id": "15",
+      "name": "Carrington McDaniel",
+      "title":  "Project Manager",
+      "department": "Project Management",
+      "email": "carrington.mcdaniel@company.com",
+      "phone":  "+1 (555) 002-0004",
+      "avatar": "https://i.pravatar.cc/150?img=60",
+      "managerId": "12"
+    },
+    {
+      "id": "16",
+      "name": "Stephanie Yang",
+      "title": "Lead Engineer",
+      "department": "Engineering",
+      "email": "stephanie.yang@company.com",
+      "phone": "+1 (555) 002-0005",
+      "avatar": "https://i.pravatar.cc/150?img=45",
+      "managerId": "12"
+    },
+    {
+      "id": "17",
+      "name": "Ben Sjobakken",
+      "title": "Director of Sales",
+      "department": "Sales",
+      "email": "ben.sjobakken@company. com",
+      "phone": "+1 (555) 002-0006",
+      "avatar":  "https://i.pravatar.cc/150?img=65",
+      "managerId": "13"
+    },
+    {
+      "id": "18",
+      "name": "Laura Levish",
+      "title": "Junior Designer",
+      "department": "Design",
+      "email": "laura.levish@company.com",
+      "phone": "+1 (555) 002-0007",
+      "avatar": "https://i.pravatar.cc/150?img=47",
+      "managerId": "14"
+    },
+    {
+      "id": "19",
+      "name": "Lisa Riabova",
+      "title": "Senior UX Designer",
+      "department":  "Design",
+      "email":  "lisa.riabova@company.com",
+      "phone":  "+1 (555) 002-0008",
+      "avatar": "https://i.pravatar.cc/150?img=44",
+      "managerId": "14"
+    },
+    {
+      "id": "20",
+      "name": "Evgeniy Kulynych",
+      "title": "Senior Engineer",
+      "department": "Engineering",
+      "email": "evgeniy.kulynych@company.com",
+      "phone":  "+1 (555) 002-0009",
+      "avatar": "https://i.pravatar.cc/150?img=66",
+      "managerId": "16"
+    },
+    {
+      "id": "21",
+      "name": "Grant Steffen",
+      "title": "Senior Engineer",
+      "department": "Engineering",
+      "email": "grant.steffen@company.com",
+      "phone": "+1 (555) 002-0010",
+      "avatar": "https://i.pravatar.cc/150?img=54",
+      "managerId": "16"
+    },
+    {
+      "id": "22",
+      "name": "Serhii Taybuls",
+      "title": "Senior Engineer",
+      "department": "Engineering",
+      "email": "serhii.taybuls@company.com",
+      "phone": "+1 (555) 002-0011",
+      "avatar": "https://i.pravatar.cc/150?img=57",
+      "managerId": "16"
+    },
+    {
+      "id": "23",
+      "name": "Ivan Zinchenko",
+      "title":  "Senior Engineer",
+      "department": "Engineering",
+      "email": "ivan.zinchenko@company.com",
+      "phone": "+1 (555) 002-0012",
+      "avatar": "https://i.pravatar.cc/150?img=61",
+      "managerId": "16"
+    }
+  ]
+}

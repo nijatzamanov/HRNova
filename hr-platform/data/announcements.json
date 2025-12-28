@@ -1,0 +1,57 @@
+[
+  {
+    "id":  "ann001",
+    "title": "Holiday Schedule 2026",
+    "message": "Dear Team,\n\nWe are pleased to share the official holiday schedule for 2026. Please review the dates and plan your work accordingly.\n\nKey holidays:\n- New Year:  January 1-2\n- Novruz:  March 20-24\n- Victory Day: May 9\n- Republic Day: May 28\n\nFor the complete list, please check the documents section.\n\nBest regards,\nHR Team",
+    "priority": "high",
+    "audience": "all",
+    "author": "HR Manager",
+    "authorId": "emp002",
+    "createdAt": "2025-12-17T14:20:00Z",
+    "read": false
+  },
+  {
+    "id": "ann002",
+    "title": "New Employee Onboarding - Leyla Əhmədova",
+    "message":  "We are excited to welcome Leyla Əhmədova to the Engineering team as a Frontend Developer!\n\nLeyla will be joining us on her first day.  Please make her feel welcome and help her get settled in.\n\nWelcome aboard, Leyla!  🎉",
+    "priority": "normal",
+    "audience": "all",
+    "author": "HR Manager",
+    "authorId":  "emp002",
+    "createdAt":  "2025-12-15T10:30:00Z",
+    "read": false
+  },
+  {
+    "id": "ann003",
+    "title": "Team Building Event - December 30",
+    "message": "Join us for our year-end team building event!\n\nDate: December 30, 2025\nTime: 14:00 - 18:00\nLocation: Company Garden\n\nActivities include games, BBQ, and prize giveaways. Please RSVP by December 25.\n\nLooking forward to seeing everyone there! ",
+    "priority": "normal",
+    "audience": "all",
+    "author": "Operations Manager",
+    "authorId":  "emp004",
+    "createdAt":  "2025-12-12T09:15:00Z",
+    "read": true
+  },
+  {
+    "id": "ann004",
+    "title": "IT System Maintenance",
+    "message": "The IT department will be performing system maintenance this weekend.\n\nDate: December 21-22\nTime: Saturday 20:00 - Sunday 06:00\n\nServices affected:\n- Email access\n- Internal file server\n- VPN connections\n\nPlease save all work before the maintenance window. Emergency contact: it@company.com",
+    "priority": "high",
+    "audience": "all",
+    "author": "IT Department",
+    "authorId": "emp001",
+    "createdAt": "2025-12-10T16:45:00Z",
+    "read": true
+  },
+  {
+    "id": "ann005",
+    "title": "Sales Team:  Q4 Performance Review",
+    "message": "Congratulations to the Sales team on exceeding Q4 targets by 15%!\n\nIndividual performance reviews will be scheduled in the first week of January.  Please prepare your self-assessment documents.\n\nGreat work, team! ",
+    "priority": "low",
+    "audience": "sales",
+    "author": "Sales Director",
+    "authorId":  "emp004",
+    "createdAt":  "2025-12-08T11:00:00Z",
+    "read": true
+  }
+]
