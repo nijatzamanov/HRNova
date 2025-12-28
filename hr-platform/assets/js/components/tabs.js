@@ -50,8 +50,6 @@
         switchTab(index) {
             if (index === this.currentIndex) return;
 
-            console.log(`🔄 Switching to tab ${index}`);
-
             // Get tab identifier
             const targetTab = this.tabs[index];
             const tabId = targetTab.dataset.tab;
@@ -91,8 +89,6 @@
                     tabId: tabId
                 }
             }));
-
-            console.log(`✅ Tab switched to:  ${tabId}`);
         }
 
         next() {
@@ -110,7 +106,6 @@
     document.addEventListener('DOMContentLoaded', () => {
         // Initialize both .tabs and .page-tabs
         document.querySelectorAll('.tabs, .page-tabs').forEach(element => {
-            console.log('🎯 Initializing tabs:', element);
             new Tabs(element);
         });
     });

@@ -128,7 +128,7 @@
             }
 
             // In real app, save to backend
-            console.log('Saving company info:', { name, timezone });
+            // API call would go here
 
             Toast.success('Success', 'Company information updated successfully');
         },
