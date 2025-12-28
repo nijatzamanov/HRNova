@@ -236,8 +236,6 @@
                     const selectedDept = this.selectedDepartment.trim().toLowerCase();
                     return empDept === selectedDept;
                 });
-
-                console.log(`🔍 Filtered by department "${this.selectedDepartment}": `, filtered.length, 'employees');
             }
 
             // Search filter - include ancestors to maintain tree structure
@@ -267,8 +265,6 @@
 
                 // Filter to only matched employees + their ancestors
                 filtered = filtered.filter(emp => searchMatches.has(emp.id));
-
-                console.log(`🔍 Search matches: `, searchMatches.size, 'employees (+ ancestors)');
             }
 
             this.filteredData = filtered;
@@ -508,8 +504,6 @@
          * Handle node action from dropdown
          */
         handleNodeAction(action, id) {
-            console.log(`📋 Node action: ${action} for ID: ${id}`);
-
             switch (action) {
                 case 'view':
                     this.openModal(id);
@@ -541,8 +535,6 @@
             if (! this.els.tree) return;
 
             const isVertical = this.els.tree.classList.toggle('org-chart--vertical');
-
-            console.log(`📐 Layout:  ${isVertical ? 'Vertical' : 'Horizontal'}`);
 
             // Save preference
             localStorage.setItem('orgChartLayout', isVertical ?  'vertical' : 'horizontal');
@@ -721,8 +713,6 @@
                 this.els.canvas.style.display = 'block';
                 this.els.canvas.style.visibility = 'visible';
                 this.els.canvas.style.opacity = '1';
-
-                console.log('✅ Canvas display set to block');
             }
 
             // Force browser repaint
@@ -748,8 +738,6 @@
 
     // Initialize org chart when page loads
     document.addEventListener('DOMContentLoaded', () => {
-        console.log('📄 DOM loaded, setting up org chart...');
-
         const orgChartTab = document.querySelector('[data-tab="org-chart"]');
         const orgChartPanel = document.querySelector('[data-panel="org-chart"]');
 
@@ -758,23 +746,15 @@
             return;
         }
 
-        console.log('✅ Org chart tab found');
-
         // Listen for tab clicks
         orgChartTab.addEventListener('click', function handleOrgChartTabClick() {
-            console.log('🖱️ Org chart tab clicked');
-
             // Wait for tab animation
             setTimeout(() => {
                 // Check if panel is visible
                 if (orgChartPanel && orgChartPanel.classList.contains('page-tab-panel--active')) {
-                    console.log('✅ Org chart panel is active');
-
                     if (! OrgChart.isInitialized) {
-                        console.log('🚀 Initializing org chart.. .');
                         OrgChart.init();
                     } else {
-                        console.log('🔄 Re-rendering org chart...');
                         OrgChart.render();
                         OrgChart.showCanvas();
                     }
@@ -786,7 +766,6 @@
 
         // Also check if org chart tab is already active on load
         if (orgChartPanel && orgChartPanel.classList.contains('page-tab-panel--active')) {
-            console.log('🎯 Org chart already active on load');
             setTimeout(() => OrgChart.init(), 300);
         }
     });
