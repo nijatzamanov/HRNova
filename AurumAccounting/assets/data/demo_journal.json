@@ -1,0 +1,255 @@
+{
+  "version": "1.0",
+  "entries": [
+    {
+      "id": "JE-2026-001",
+      "date":  "2026-01-05",
+      "reference": "JE-2026-001",
+      "description": "İlkin kapital qoyuluşu",
+      "status": "posted",
+      "created_at": "2026-01-05T09:00:00Z",
+      "created_by": "Admin",
+      "lines": [
+        {
+          "id": "1",
+          "account_code": "20302",
+          "account_name": "Bank hesablarında pul (AZN)",
+          "debit": 100000,
+          "credit": 0,
+          "memo": "Nizamnamə kapitalının bank hesabına köçürülməsi",
+          "cost_center": null
+        },
+        {
+          "id": "2",
+          "account_code": "301",
+          "account_name":  "Nizamnamə kapitali",
+          "debit": 0,
+          "credit": 100000,
+          "memo": "Təsisçilərin ilkin töhfəsi",
+          "cost_center": null
+        }
+      ]
+    },
+    {
+      "id": "JE-2026-002",
+      "date": "2026-01-08",
+      "reference": "JE-2026-002",
+      "description": "Ofis avadanlığı alışı",
+      "status": "posted",
+      "created_at": "2026-01-08T10:30:00Z",
+      "created_by": "Admin",
+      "lines": [
+        {
+          "id": "1",
+          "account_code":  "10204",
+          "account_name":  "Avadanlıq və alətlər",
+          "debit": 15000,
+          "credit": 0,
+          "memo": "10 ədəd kompüter və printer",
+          "cost_center":  "IT-DEPT"
+        },
+        {
+          "id": "2",
+          "account_code": "20302",
+          "account_name": "Bank hesablarında pul (AZN)",
+          "debit": 0,
+          "credit": 15000,
+          "memo": "TechStore MMC-dən alış",
+          "cost_center": null
+        }
+      ]
+    },
+    {
+      "id": "JE-2026-003",
+      "date": "2026-01-10",
+      "reference": "JE-2026-003",
+      "description": "İcarə xərcinin ödənilməsi",
+      "status": "posted",
+      "created_at": "2026-01-10T14:15:00Z",
+      "created_by": "Admin",
+      "lines": [
+        {
+          "id": "1",
+          "account_code": "70202",
+          "account_name":  "İcarə xərcləri",
+          "debit":  3000,
+          "credit": 0,
+          "memo": "Yanvar ayı ofis icarəsi",
+          "cost_center": "ADMIN"
+        },
+        {
+          "id": "2",
+          "account_code": "20302",
+          "account_name": "Bank hesablarında pul (AZN)",
+          "debit": 0,
+          "credit": 3000,
+          "memo": "Mülkiyyətçiyə köçürülmə",
+          "cost_center": null
+        }
+      ]
+    },
+    {
+      "id":  "JE-2026-004",
+      "date": "2026-01-12",
+      "reference": "INV-001",
+      "description": "Müştəriyə xidmət göstərilməsi",
+      "status":  "posted",
+      "created_at": "2026-01-12T16:45:00Z",
+      "created_by":  "Admin",
+      "lines":  [
+        {
+          "id": "1",
+          "account_code": "20201",
+          "account_name":  "Qısamüddətli debitor borcları",
+          "debit":  25000,
+          "credit": 0,
+          "memo": "ABC MMC üçün konsaltinq xidməti",
+          "cost_center": "SALES"
+        },
+        {
+          "id": "2",
+          "account_code": "603",
+          "account_name":  "Xidmət göstərilməsindən gəlir",
+          "debit": 0,
+          "credit": 25000,
+          "memo":  "3 aylıq layihə müqaviləsi",
+          "cost_center": "SALES"
+        }
+      ]
+    },
+    {
+      "id":  "JE-2026-005",
+      "date": "2026-01-15",
+      "reference": "PAY-001",
+      "description": "Əmək haqqının ödənilməsi",
+      "status": "posted",
+      "created_at": "2026-01-15T11:00:00Z",
+      "created_by": "Admin",
+      "lines": [
+        {
+          "id": "1",
+          "account_code": "70201",
+          "account_name": "Əmək haqqı",
+          "debit":  12000,
+          "credit": 0,
+          "memo": "Yanvar ayı maaş",
+          "cost_center": "ADMIN"
+        },
+        {
+          "id": "2",
+          "account_code": "50403",
+          "account_name":  "Sosial sığorta ayırmaları",
+          "debit": 2400,
+          "credit": 0,
+          "memo": "DSMF ayırmaları (20%)",
+          "cost_center":  "ADMIN"
+        },
+        {
+          "id":  "3",
+          "account_code": "503",
+          "account_name":  "İşçilərə əmək haqqı üzrə borc",
+          "debit":  0,
+          "credit": 12000,
+          "memo": "Hesablanmış maaş",
+          "cost_center": null
+        },
+        {
+          "id":  "4",
+          "account_code": "504",
+          "account_name":  "Büdcə ilə hesablaşmalar",
+          "debit":  0,
+          "credit":  2400,
+          "memo": "Dövlət büdcəsinə keçiriləcək",
+          "cost_center": null
+        }
+      ]
+    },
+    {
+      "id": "JE-2026-006",
+      "date": "2026-01-18",
+      "reference": "REC-001",
+      "description": "Müştəridən ödəniş alınması",
+      "status": "posted",
+      "created_at": "2026-01-18T09:30:00Z",
+      "created_by": "Admin",
+      "lines": [
+        {
+          "id": "1",
+          "account_code":  "20302",
+          "account_name":  "Bank hesablarında pul (AZN)",
+          "debit": 25000,
+          "credit": 0,
+          "memo": "ABC MMC-dən köçürülmə",
+          "cost_center": null
+        },
+        {
+          "id": "2",
+          "account_code": "20201",
+          "account_name": "Qısamüddətli debitor borcları",
+          "debit": 0,
+          "credit": 25000,
+          "memo": "INV-001 üzrə ödəniş",
+          "cost_center": null
+        }
+      ]
+    },
+    {
+      "id": "JE-2026-007",
+      "date": "2026-01-20",
+      "reference": "JE-2026-007",
+      "description": "Kommunal xərclərin ödənilməsi",
+      "status": "posted",
+      "created_at": "2026-01-20T13:20:00Z",
+      "created_by": "Admin",
+      "lines": [
+        {
+          "id": "1",
+          "account_code": "70203",
+          "account_name":  "Kommunal xərclər",
+          "debit": 850,
+          "credit": 0,
+          "memo": "Elektrik, su, qaz - yanvar",
+          "cost_center": "ADMIN"
+        },
+        {
+          "id":  "2",
+          "account_code": "20302",
+          "account_name": "Bank hesablarında pul (AZN)",
+          "debit":  0,
+          "credit":  850,
+          "memo":  "Kommunal xidmətlərə ödəniş",
+          "cost_center": null
+        }
+      ]
+    },
+    {
+      "id": "JE-2026-008",
+      "date": "2026-01-22",
+      "reference": "JE-2026-008",
+      "description": "Xammal alışı",
+      "status": "posted",
+      "created_at": "2026-01-22T10:00:00Z",
+      "created_by": "Admin",
+      "lines": [
+        {
+          "id": "1",
+          "account_code": "20101",
+          "account_name":  "Xammal və materiallar",
+          "debit":  8500,
+          "credit": 0,
+          "memo": "Təchizatçıdan xammal alışı",
+          "cost_center": "PROD"
+        },
+        {
+          "id": "2",
+          "account_code": "501",
+          "account_name":  "Təchizatçılar və podratçılar",
+          "debit": 0,
+          "credit": 8500,
+          "memo": "Veresiyə alış - 30 gün",
+          "cost_center": null
+        }
+      ]
+    }
+  ]
+}
