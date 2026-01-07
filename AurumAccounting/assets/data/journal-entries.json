@@ -1,0 +1,252 @@
+[
+  {
+    "id": "JE-001",
+    "date": "2026-01-01",
+    "ref": "JE-001",
+    "description": "Initial capital investment by owner",
+    "lines": [
+      {
+        "account_code": "1020",
+        "account_name":  "Cash in Bank - Checking",
+        "debit": 100000,
+        "credit": 0
+      },
+      {
+        "account_code": "3000",
+        "account_name": "Owner's Equity",
+        "debit": 0,
+        "credit": 100000
+      }
+    ],
+    "total_debit": 100000,
+    "total_credit": 100000,
+    "is_balanced": true,
+    "created_by": "Admin",
+    "created_at":  "2026-01-01T09:00:00Z"
+  },
+  {
+    "id": "JE-002",
+    "date": "2026-01-02",
+    "ref": "PO-2401",
+    "description": "Purchased office equipment for cash",
+    "lines": [
+      {
+        "account_code": "1540",
+        "account_name":  "Office Equipment",
+        "debit":  5000,
+        "credit": 0
+      },
+      {
+        "account_code": "1020",
+        "account_name": "Cash in Bank - Checking",
+        "debit": 0,
+        "credit": 5000
+      }
+    ],
+    "total_debit":  5000,
+    "total_credit": 5000,
+    "is_balanced": true,
+    "created_by": "Admin",
+    "created_at": "2026-01-02T10:30:00Z"
+  },
+  {
+    "id": "JE-003",
+    "date": "2026-01-03",
+    "ref": "INV-1001",
+    "description": "Provided consulting services to Client A on credit",
+    "lines": [
+      {
+        "account_code": "1100",
+        "account_name":  "Accounts Receivable",
+        "debit": 12500,
+        "credit": 0
+      },
+      {
+        "account_code": "4100",
+        "account_name":  "Service Revenue",
+        "debit": 0,
+        "credit": 12500
+      }
+    ],
+    "total_debit": 12500,
+    "total_credit": 12500,
+    "is_balanced": true,
+    "created_by": "Admin",
+    "created_at":  "2026-01-03T14:20:00Z"
+  },
+  {
+    "id": "JE-004",
+    "date": "2026-01-05",
+    "ref": "RENT-JAN",
+    "description": "Paid office rent for January 2026",
+    "lines": [
+      {
+        "account_code": "6200",
+        "account_name":  "Rent Expense",
+        "debit": 2000,
+        "credit": 0
+      },
+      {
+        "account_code": "1020",
+        "account_name": "Cash in Bank - Checking",
+        "debit": 0,
+        "credit": 2000
+      }
+    ],
+    "total_debit":  2000,
+    "total_credit": 2000,
+    "is_balanced": true,
+    "created_by": "Admin",
+    "created_at": "2026-01-05T09:15:00Z"
+  },
+  {
+    "id": "JE-005",
+    "date": "2026-01-06",
+    "ref": "UTIL-001",
+    "description": "Paid electricity bill for December 2025",
+    "lines": [
+      {
+        "account_code": "6310",
+        "account_name":  "Electricity Expense",
+        "debit": 450,
+        "credit": 0
+      },
+      {
+        "account_code": "1020",
+        "account_name":  "Cash in Bank - Checking",
+        "debit": 0,
+        "credit": 450
+      }
+    ],
+    "total_debit": 450,
+    "total_credit":  450,
+    "is_balanced": true,
+    "created_by": "Admin",
+    "created_at": "2026-01-06T11:00:00Z"
+  },
+  {
+    "id": "JE-006",
+    "date": "2026-01-07",
+    "ref": "REC-1001",
+    "description": "Received payment from Client A",
+    "lines": [
+      {
+        "account_code": "1020",
+        "account_name": "Cash in Bank - Checking",
+        "debit": 12500,
+        "credit": 0
+      },
+      {
+        "account_code": "1100",
+        "account_name": "Accounts Receivable",
+        "debit": 0,
+        "credit": 12500
+      }
+    ],
+    "total_debit": 12500,
+    "total_credit": 12500,
+    "is_balanced": true,
+    "created_by": "Admin",
+    "created_at":  "2026-01-07T15:45:00Z"
+  },
+  {
+    "id": "JE-007",
+    "date": "2026-01-10",
+    "ref": "SAL-JAN-1",
+    "description": "Paid employee salaries for first half of January",
+    "lines": [
+      {
+        "account_code": "6000",
+        "account_name":  "Salaries & Wages Expense",
+        "debit":  8000,
+        "credit": 0
+      },
+      {
+        "account_code": "1020",
+        "account_name": "Cash in Bank - Checking",
+        "debit": 0,
+        "credit": 8000
+      }
+    ],
+    "total_debit":  8000,
+    "total_credit": 8000,
+    "is_balanced": true,
+    "created_by": "Admin",
+    "created_at": "2026-01-10T16:00:00Z"
+  },
+  {
+    "id": "JE-008",
+    "date": "2026-01-12",
+    "ref": "INV-1002",
+    "description": "Cash sale of software license to Client B",
+    "lines":  [
+      {
+        "account_code": "1020",
+        "account_name": "Cash in Bank - Checking",
+        "debit": 7500,
+        "credit": 0
+      },
+      {
+        "account_code": "4100",
+        "account_name": "Service Revenue",
+        "debit": 0,
+        "credit": 7500
+      }
+    ],
+    "total_debit": 7500,
+    "total_credit": 7500,
+    "is_balanced": true,
+    "created_by": "Admin",
+    "created_at": "2026-01-12T10:30:00Z"
+  },
+  {
+    "id": "JE-009",
+    "date": "2026-01-13",
+    "ref": "SUP-001",
+    "description": "Purchased office supplies on credit from Vendor X",
+    "lines": [
+      {
+        "account_code": "6600",
+        "account_name":  "Office Supplies Expense",
+        "debit":  350,
+        "credit": 0
+      },
+      {
+        "account_code": "2000",
+        "account_name":  "Accounts Payable",
+        "debit":  0,
+        "credit":  350
+      }
+    ],
+    "total_debit":  350,
+    "total_credit": 350,
+    "is_balanced": true,
+    "created_by": "Admin",
+    "created_at": "2026-01-13T13:20:00Z"
+  },
+  {
+    "id": "JE-010",
+    "date": "2026-01-14",
+    "ref": "TEL-JAN",
+    "description": "Paid internet and telephone bill",
+    "lines": [
+      {
+        "account_code":  "6330",
+        "account_name":  "Internet & Telephone Expense",
+        "debit": 180,
+        "credit": 0
+      },
+      {
+        "account_code": "1020",
+        "account_name":  "Cash in Bank - Checking",
+        "debit": 0,
+        "credit": 180
+      }
+    ],
+    "total_debit": 180,
+    "total_credit":  180,
+    "is_balanced": true,
+    "created_by": "Admin",
+    "created_at": "2026-01-14T09:45:00Z"
+  }
+]

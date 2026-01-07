@@ -1,0 +1,27 @@
+.report-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    align-items: flex-end;
+    margin-bottom: var(--space-6);
+}
+
+.report-filters .form-field {
+    flex: 0 1 200px;
+    margin-bottom: 0;
+}
+
+.report-filters .btn {
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .report-filters {
+        flex-direction:  column;
+        align-items: stretch;
+    }
+
+    .report-filters .form-field {
+        width: 100%;
+    }
+}

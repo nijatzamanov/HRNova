@@ -1,0 +1,205 @@
+{
+  "page":  {
+    "login": {
+      "title": "Anmeldung – AurumAccounting"
+    },
+    "dashboard":  {
+      "title": "Dashboard – AurumAccounting"
+    },
+    "coa":  {
+      "title": "Kontenplan – AurumAccounting"
+    },
+    "journal":  {
+      "title": "Journaleinträge – AurumAccounting"
+    },
+    "trialBalance": {
+      "title": "Rohbilanz – AurumAccounting"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Anmelden",
+      "subtitle": "Zugang zu Ihrem Buchhaltungs-Dashboard",
+      "submit": "Anmelden",
+      "remember": "Angemeldet bleiben",
+      "noAccount": "Noch kein Konto? "
+    },
+    "register": {
+      "link": "Registrieren"
+    },
+    "email":  {
+      "label": "E-Mail",
+      "placeholder":  "sie@unternehmen.com"
+    },
+    "password": {
+      "label": "Passwort",
+      "placeholder": "••••••••"
+    }
+  },
+  "header":  {
+    "user": {
+      "role": {
+        "admin": "Administrator"
+      },
+      "profile": "Profil",
+      "settings": "Einstellungen",
+      "logout": "Abmelden"
+    }
+  },
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "chartOfAccounts":  "Kontenplan",
+    "journal": "Journaleinträge",
+    "trialBalance": "Rohbilanz"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "cards": {
+      "revenue": "Einnahmen",
+      "expenses":  "Ausgaben",
+      "profit": "Nettogewinn",
+      "accounts": "Konten"
+    },
+    "recent": {
+      "title": "Letzte Transaktionen",
+      "viewAll": "Alle anzeigen",
+      "table": {
+        "date": "Datum",
+        "description": "Beschreibung",
+        "account": "Konto",
+        "debit": "Soll",
+        "credit": "Haben"
+      },
+      "empty": "Keine aktuellen Transaktionen"
+    }
+  },
+  "coa": {
+    "title": "Kontenplan",
+    "addAccount": "Konto hinzufügen",
+    "search": {
+      "placeholder": "Konten suchen..."
+    },
+    "filter": {
+      "allTypes": "Alle Typen",
+      "asset": "Vermögen",
+      "liability": "Verbindlichkeit",
+      "equity": "Eigenkapital",
+      "revenue":  "Ertrag",
+      "expense":  "Aufwand"
+    },
+    "table": {
+      "code": "Code",
+      "name": "Name",
+      "type": "Typ",
+      "balance": "Saldo",
+      "actions": "Aktionen",
+      "empty": "Keine Konten gefunden"
+    },
+    "modal": {
+      "add": {
+        "title": "Konto hinzufügen"
+      },
+      "edit": {
+        "title": "Konto bearbeiten"
+      },
+      "code": {
+        "label":  "Kontocode"
+      },
+      "name": {
+        "label": "Kontoname"
+      },
+      "type": {
+        "label": "Typ",
+        "placeholder": "Typ auswählen",
+        "asset": "Vermögen",
+        "liability": "Verbindlichkeit",
+        "equity": "Eigenkapital",
+        "revenue": "Ertrag",
+        "expense": "Aufwand"
+      },
+      "cancel": "Abbrechen",
+      "save":  "Speichern"
+    }
+  },
+  "journal": {
+    "title": "Journaleinträge",
+    "addEntry": "Neuer Eintrag",
+    "table": {
+      "date": "Datum",
+      "ref": "Referenz",
+      "description": "Beschreibung",
+      "account": "Konto",
+      "debit": "Soll",
+      "credit": "Haben",
+      "actions":  "Aktionen",
+      "empty": "Noch keine Einträge"
+    },
+    "modal": {
+      "title": "Neuer Journaleintrag",
+      "date":  {
+        "label": "Datum"
+      },
+      "ref": {
+        "label":  "Referenz"
+      },
+      "description": {
+        "label": "Beschreibung"
+      },
+      "lines": {
+        "title": "Zeilen",
+        "account": "Konto",
+        "debit": "Soll",
+        "credit": "Haben",
+        "selectAccount": "Konto auswählen"
+      },
+      "addLine":  "Zeile hinzufügen",
+      "totals": {
+        "debit": "Soll gesamt:",
+        "credit": "Haben gesamt:",
+        "diff": "Differenz:"
+      },
+      "cancel": "Abbrechen",
+      "save": "Speichern"
+    }
+  },
+  "reports": {
+    "trialBalance": {
+      "title": "Rohbilanz",
+      "table": {
+        "code": "Code",
+        "account": "Konto",
+        "debit": "Soll",
+        "credit":  "Haben"
+      },
+      "totals": "Summe",
+      "empty": "Zeitraum auswählen und Bericht erstellen"
+    },
+    "period": {
+      "start":  "Von",
+      "end": "Bis"
+    },
+    "generate": "Erstellen",
+    "export": {
+      "pdf": "PDF exportieren"
+    }
+  },
+  "ui": {
+    "confirm": {
+      "title": "Bestätigen",
+      "yes": "Ja",
+      "no": "Nein",
+      "cancel": "Abbrechen",
+      "ok": "OK"
+    },
+    "loading": "Lädt...",
+    "saving":  "Speichert...",
+    "deleting": "Löscht...",
+    "search": "Suchen",
+    "close": "Schließen",
+    "save": "Speichern",
+    "edit": "Bearbeiten",
+    "delete": "Löschen",
+    "view": "Ansicht",
+    "actions": "Aktionen"
+  }
+}

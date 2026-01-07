@@ -1,0 +1,205 @@
+{
+  "page": {
+    "login": {
+      "title": "Вход – AurumAccounting"
+    },
+    "dashboard": {
+      "title":  "Панель управления – AurumAccounting"
+    },
+    "coa": {
+      "title": "План счетов – AurumAccounting"
+    },
+    "journal": {
+      "title":  "Журнальные записи – AurumAccounting"
+    },
+    "trialBalance": {
+      "title": "Пробный баланс – AurumAccounting"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Войти",
+      "subtitle": "Доступ к панели бухгалтерии",
+      "submit": "Войти",
+      "remember": "Запомнить меня",
+      "noAccount":  "Нет аккаунта? "
+    },
+    "register": {
+      "link": "Зарегистрироваться"
+    },
+    "email": {
+      "label": "Электронная почта",
+      "placeholder": "вы@компания.com"
+    },
+    "password": {
+      "label": "Пароль",
+      "placeholder":  "••••••••"
+    }
+  },
+  "header": {
+    "user": {
+      "role": {
+        "admin": "Администратор"
+      },
+      "profile": "Профиль",
+      "settings": "Настройки",
+      "logout":  "Выйти"
+    }
+  },
+  "sidebar": {
+    "dashboard": "Панель управления",
+    "chartOfAccounts": "План счетов",
+    "journal": "Журнальные записи",
+    "trialBalance": "Пробный баланс"
+  },
+  "dashboard": {
+    "title":  "Панель управления",
+    "cards": {
+      "revenue": "Доходы",
+      "expenses": "Расходы",
+      "profit":  "Чистая прибыль",
+      "accounts": "Счета"
+    },
+    "recent": {
+      "title": "Последние транзакции",
+      "viewAll": "Посмотреть все",
+      "table": {
+        "date": "Дата",
+        "description": "Описание",
+        "account":  "Счет",
+        "debit": "Дебет",
+        "credit":  "Кредит"
+      },
+      "empty": "Нет последних транзакций"
+    }
+  },
+  "coa": {
+    "title":  "План счетов",
+    "addAccount": "Добавить счет",
+    "search": {
+      "placeholder": "Поиск счетов..."
+    },
+    "filter":  {
+      "allTypes": "Все типы",
+      "asset": "Актив",
+      "liability": "Обязательство",
+      "equity": "Капитал",
+      "revenue": "Доход",
+      "expense": "Расход"
+    },
+    "table": {
+      "code": "Код",
+      "name": "Название",
+      "type": "Тип",
+      "balance":  "Баланс",
+      "actions": "Действия",
+      "empty": "Счета не найдены"
+    },
+    "modal": {
+      "add": {
+        "title": "Добавить счет"
+      },
+      "edit": {
+        "title": "Редактировать счет"
+      },
+      "code":  {
+        "label": "Код счета"
+      },
+      "name": {
+        "label": "Название счета"
+      },
+      "type": {
+        "label":  "Тип",
+        "placeholder": "Выберите тип",
+        "asset": "Актив",
+        "liability": "Обязательство",
+        "equity": "Капитал",
+        "revenue":  "Доход",
+        "expense": "Расход"
+      },
+      "cancel": "Отмена",
+      "save": "Сохранить"
+    }
+  },
+  "journal": {
+    "title": "Журнальные записи",
+    "addEntry": "Новая запись",
+    "table": {
+      "date": "Дата",
+      "ref": "Ссылка",
+      "description": "Описание",
+      "account": "Счет",
+      "debit": "Дебет",
+      "credit": "Кредит",
+      "actions": "Действия",
+      "empty": "Пока нет записей"
+    },
+    "modal": {
+      "title": "Новая журнальная запись",
+      "date": {
+        "label":  "Дата"
+      },
+      "ref": {
+        "label": "Ссылка"
+      },
+      "description": {
+        "label":  "Описание"
+      },
+      "lines": {
+        "title": "Строки",
+        "account": "Счет",
+        "debit": "Дебет",
+        "credit": "Кредит",
+        "selectAccount": "Выберите счет"
+      },
+      "addLine": "Добавить строку",
+      "totals":  {
+        "debit": "Всего дебет:",
+        "credit": "Всего кредит:",
+        "diff": "Разница:"
+      },
+      "cancel":  "Отмена",
+      "save": "Сохранить"
+    }
+  },
+  "reports": {
+    "trialBalance": {
+      "title": "Пробный баланс",
+      "table": {
+        "code": "Код",
+        "account":  "Счет",
+        "debit": "Дебет",
+        "credit": "Кредит"
+      },
+      "totals": "Итого",
+      "empty": "Выберите период и создайте отчет"
+    },
+    "period": {
+      "start": "С",
+      "end": "По"
+    },
+    "generate": "Создать",
+    "export": {
+      "pdf": "Экспорт PDF"
+    }
+  },
+  "ui":  {
+    "confirm": {
+      "title": "Подтвердить",
+      "yes":  "Да",
+      "no": "Нет",
+      "cancel": "Отмена",
+      "ok": "OK"
+    },
+    "loading": "Загрузка.. .",
+    "saving": "Сохранение...",
+    "deleting": "Удаление...",
+    "search":  "Поиск",
+    "close": "Закрыть",
+    "save": "Сохранить",
+    "edit": "Редактировать",
+    "delete": "Удалить",
+    "view": "Просмотр",
+    "actions": "Действия"
+  }
+}

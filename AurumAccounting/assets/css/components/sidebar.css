@@ -1,0 +1,192 @@
+.app-sidebar {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    bottom: 0;
+    width:  var(--sidebar-width);
+    background: linear-gradient(180deg, #ffffff 0%, #fafaf9 100%);
+    border-right: 1px solid var(--color-border);
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: transform var(--transition-base), width var(--transition-base);
+    z-index: var(--z-sticky);
+    box-shadow: var(--shadow-sm);
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: var(--space-6) 0;
+}
+
+.sidebar__menu {
+    flex: 1;
+}
+
+.sidebar__item {
+    margin-bottom: var(--space-2);
+    padding: 0 var(--space-4);
+}
+
+.sidebar__link {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-4);
+    border-radius: var(--radius-lg);
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    transition: var(--transition-fast);
+    position: relative;
+}
+
+.sidebar__link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top:  50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 0;
+    background: linear-gradient(180deg, var(--color-primary-500), var(--color-primary-600));
+    border-radius: 0 var(--radius-full) var(--radius-full) 0;
+    transition: var(--transition-fast);
+}
+
+.sidebar__link:hover {
+    background-color: var(--color-primary-50);
+    color: var(--color-primary-600);
+}
+
+.sidebar__link--active {
+    background:  linear-gradient(135deg, var(--color-primary-50) 0%, var(--color-primary-100) 100%);
+    color: var(--color-primary-700);
+    font-weight: var(--font-weight-semibold);
+}
+
+.sidebar__link--active::before {
+    height: 24px;
+}
+
+.sidebar__icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.sidebar__label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sidebar__footer {
+    padding: var(--space-4);
+    border-top: 1px solid var(--color-border);
+    margin-top: auto;
+}
+
+.sidebar__version {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-tertiary);
+    text-align: center;
+    font-weight: var(--font-weight-medium);
+}
+
+/* Collapsed state */
+body.sidebar-collapsed .app-sidebar {
+    width: var(--sidebar-collapsed-width);
+}
+
+body.sidebar-collapsed .sidebar__label,
+body.sidebar-collapsed .sidebar__version {
+    display: none;
+}
+
+body.sidebar-collapsed .sidebar__link {
+    justify-content: center;
+    padding: var(--space-3);
+}
+
+/* Mobile */
+@media (max-width:  1024px) {
+    .app-sidebar {
+        transform: translateX(-100%);
+    }
+
+    body.sidebar-open .app-sidebar {
+        transform: translateX(0);
+        box-shadow: var(--shadow-xl);
+    }
+}
+
+/* Sidebar Footer Enhanced Styles */
+.sidebar__footer {
+    padding: var(--space-6) var(--space-4);
+    border-top: 1px solid var(--color-border);
+    margin-top: auto;
+    background:  linear-gradient(180deg, transparent 0%, rgba(250, 250, 249, 0.5) 100%);
+}
+
+.sidebar__company {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+}
+
+.sidebar__company-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.sidebar__company-name {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-1);
+}
+
+.sidebar__version {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-primary);
+    background: var(--color-neutral-100);
+    padding: 0.125rem var(--space-2);
+    border-radius: var(--radius-full);
+    display: inline-block;
+    margin-bottom: var(--space-4);
+}
+
+.sidebar__credits {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
+    text-align: center;
+    line-height: var(--line-height-relaxed);
+}
+
+.sidebar__credits span {
+    display: block;
+    color: var(--color-text-tertiary);
+}
+
+.sidebar__credits strong {
+    display: block;
+    font-weight: var(--font-weight-bold);
+    background: linear-gradient(135deg, var(--color-primary-600), var(--color-primary-500));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Collapsed state */
+body.sidebar-collapsed .sidebar__company-info,
+body.sidebar-collapsed .sidebar__credits {
+    display: none;
+}
+
+body.sidebar-collapsed .sidebar__company {
+    justify-content: center;
+}

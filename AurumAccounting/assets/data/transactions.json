@@ -1,0 +1,222 @@
+[
+  {
+    "id": "1",
+    "date": "2026-01-05",
+    "ref": "JE-001",
+    "description": "Initial capital investment",
+    "account_code": "1020",
+    "account_name": "Cash in Bank - Checking",
+    "debit": 50000,
+    "credit": 0,
+    "balance": 50000
+  },
+  {
+    "id": "2",
+    "date": "2026-01-05",
+    "ref": "JE-001",
+    "description": "Initial capital investment",
+    "account_code": "3100",
+    "account_name": "Share Capital",
+    "debit":  0,
+    "credit":  50000,
+    "balance": 50000
+  },
+  {
+    "id": "3",
+    "date": "2026-01-06",
+    "ref": "JE-002",
+    "description": "Purchased office equipment",
+    "account_code": "1540",
+    "account_name":  "Office Equipment",
+    "debit":  5000,
+    "credit": 0,
+    "balance": 5000
+  },
+  {
+    "id": "4",
+    "date": "2026-01-06",
+    "ref": "JE-002",
+    "description": "Purchased office equipment",
+    "account_code": "1020",
+    "account_name":  "Cash in Bank - Checking",
+    "debit": 0,
+    "credit": 5000,
+    "balance": 45000
+  },
+  {
+    "id": "5",
+    "date": "2026-01-07",
+    "ref": "INV-001",
+    "description": "Service revenue from Client A",
+    "account_code": "1100",
+    "account_name":  "Accounts Receivable",
+    "debit": 12500,
+    "credit": 0,
+    "balance": 12500
+  },
+  {
+    "id": "6",
+    "date": "2026-01-07",
+    "ref": "INV-001",
+    "description": "Service revenue from Client A",
+    "account_code": "4100",
+    "account_name":  "Service Revenue",
+    "debit": 0,
+    "credit": 12500,
+    "balance": 12500
+  },
+  {
+    "id": "7",
+    "date": "2026-01-08",
+    "ref": "PAY-001",
+    "description": "Paid office rent for January",
+    "account_code":  "6200",
+    "account_name":  "Rent Expense",
+    "debit": 2000,
+    "credit": 0,
+    "balance": 2000
+  },
+  {
+    "id": "8",
+    "date": "2026-01-08",
+    "ref": "PAY-001",
+    "description": "Paid office rent for January",
+    "account_code": "1020",
+    "account_name": "Cash in Bank - Checking",
+    "debit": 0,
+    "credit": 2000,
+    "balance": 43000
+  },
+  {
+    "id": "9",
+    "date": "2026-01-09",
+    "ref": "PAY-002",
+    "description": "Paid utilities bill",
+    "account_code":  "6300",
+    "account_name":  "Utilities Expense",
+    "debit": 450,
+    "credit": 0,
+    "balance": 450
+  },
+  {
+    "id": "10",
+    "date": "2026-01-09",
+    "ref":  "PAY-002",
+    "description": "Paid utilities bill",
+    "account_code":  "1020",
+    "account_name": "Cash in Bank - Checking",
+    "debit": 0,
+    "credit": 450,
+    "balance": 42550
+  },
+  {
+    "id": "11",
+    "date": "2026-01-10",
+    "ref": "JE-003",
+    "description": "Received payment from Client A",
+    "account_code": "1020",
+    "account_name":  "Cash in Bank - Checking",
+    "debit": 12500,
+    "credit": 0,
+    "balance": 55050
+  },
+  {
+    "id": "12",
+    "date": "2026-01-10",
+    "ref": "JE-003",
+    "description": "Received payment from Client A",
+    "account_code": "1100",
+    "account_name": "Accounts Receivable",
+    "debit": 0,
+    "credit": 12500,
+    "balance": 0
+  },
+  {
+    "id": "13",
+    "date": "2026-01-11",
+    "ref":  "PAY-003",
+    "description": "Employee salaries for January",
+    "account_code": "6000",
+    "account_name":  "Salaries & Wages",
+    "debit": 8000,
+    "credit": 0,
+    "balance": 8000
+  },
+  {
+    "id": "14",
+    "date": "2026-01-11",
+    "ref": "PAY-003",
+    "description": "Employee salaries for January",
+    "account_code": "1020",
+    "account_name": "Cash in Bank - Checking",
+    "debit": 0,
+    "credit": 8000,
+    "balance": 47050
+  },
+  {
+    "id": "15",
+    "date": "2026-01-12",
+    "ref":  "INV-002",
+    "description": "Service revenue from Client B",
+    "account_code": "1020",
+    "account_name":  "Cash in Bank - Checking",
+    "debit": 7500,
+    "credit": 0,
+    "balance": 54550
+  },
+  {
+    "id": "16",
+    "date": "2026-01-12",
+    "ref": "INV-002",
+    "description": "Service revenue from Client B",
+    "account_code": "4100",
+    "account_name": "Service Revenue",
+    "debit": 0,
+    "credit": 7500,
+    "balance":  20000
+  },
+  {
+    "id": "17",
+    "date": "2026-01-13",
+    "ref":  "PAY-004",
+    "description": "Office supplies purchased",
+    "account_code": "6600",
+    "account_name":  "Office Supplies",
+    "debit": 350,
+    "credit": 0,
+    "balance": 350
+  },
+  {
+    "id": "18",
+    "date": "2026-01-13",
+    "ref":  "PAY-004",
+    "description": "Office supplies purchased",
+    "account_code": "1020",
+    "account_name": "Cash in Bank - Checking",
+    "debit":  0,
+    "credit":  350,
+    "balance":  54200
+  },
+  {
+    "id": "19",
+    "date": "2026-01-14",
+    "ref":  "PAY-005",
+    "description": "Internet and telephone bill",
+    "account_code":  "6330",
+    "account_name":  "Internet & Telephone",
+    "debit": 180,
+    "credit": 0,
+    "balance": 180
+  },
+  {
+    "id": "20",
+    "date": "2026-01-14",
+    "ref":  "PAY-005",
+    "description": "Internet and telephone bill",
+    "account_code":  "1020",
+    "account_name": "Cash in Bank - Checking",
+    "debit": 0,
+    "credit": 180,
+    "balance": 54020
+  }
+]

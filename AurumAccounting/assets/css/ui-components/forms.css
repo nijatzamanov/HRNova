@@ -1,0 +1,298 @@
+/* ========================================
+   PREMIUM FORMS - Perfect Alignment
+   ======================================== */
+
+.form-group {
+    margin-bottom: var(--space-6);
+    position: relative;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: var(--space-3);
+    /*font-size: var(--font-size-sm);*/
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+    letter-spacing: 0.02em;
+}
+
+.form-label--required::after {
+    content: '*';
+    color: var(--color-error-500);
+    margin-left: var(--space-2);
+    font-size: var(--font-size-base);
+}
+
+/* Premium Input Fields - Perfect Height */
+.form-input,
+.form-select,
+.form-textarea {
+    display: block;
+    width: 100%;
+    height: 48px; /* Fixed height for consistency */
+    padding: 0 var(--space-5);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 48px;
+    color: var(--color-text-primary);
+    background:  white;
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.form-textarea {
+    height: auto;
+    min-height: 120px;
+    padding: var(--space-4) var(--space-5);
+    line-height: var(--line-height-relaxed);
+    resize: vertical;
+}
+
+.form-input:hover,
+.form-select:hover,
+.form-textarea:hover {
+    border-color: var(--color-primary-300);
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.08);
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--color-primary-500);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.08), 0 4px 12px rgba(99, 102, 241, 0.12);
+    transform: translateY(-1px);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: var(--color-text-tertiary);
+    font-weight: var(--font-weight-normal);
+}
+
+/* Premium Select */
+.form-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    padding-right: var(--space-12);
+    background-color: white;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 7.5L10 12.5L15 7.5' stroke='%236366f1' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right var(--space-4) center;
+    background-size: 20px 20px;
+}
+
+.form-select:hover {
+    background-color: white;
+}
+
+.form-select:focus {
+    background-color: white;
+}
+
+/* Firefox specific */
+.form-select::-moz-focus-inner {
+    border: 0;
+}
+
+.form-select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 var(--color-text-primary);
+}
+
+/* Search Input */
+.form-input--search {
+    padding-left: var(--space-12);
+    background-color: white;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8.5' cy='8.5' r='6' stroke='%236366f1' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M13 13L17.5 17.5' stroke='%236366f1' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: left var(--space-4) center;
+    background-size:  20px 20px;
+}
+
+/*.form-input--search:focus {
+    background-color: white;
+}*/
+
+/*.form-input--search:hover {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8.5' cy='8.5' r='6' stroke='%234f46e5' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M13 13L17.5 17.5' stroke='%234f46e5' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E");
+}*/
+
+/* Date Input - Hide default icon, show custom */
+.form-input[type="date"] {
+    position: relative;
+    background-image: none; /* Remove previous background */
+}
+
+/* Hide default calendar icon */
+.form-input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    right: var(--space-4);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+}
+
+/* Custom calendar icon */
+.form-input[type="date"]::before {
+    content: '';
+    position: absolute;
+    right: var(--space-4);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='2.5' y='3.5' width='15' height='15' rx='2' stroke='%236366f1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M6 2V5M14 2V5' stroke='%236366f1' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M2.5 7.5H17.5' stroke='%236366f1' stroke-width='2' stroke-linecap='round'/%3E%3Ccircle cx='6' cy='11' r='1' fill='%236366f1'/%3E%3Ccircle cx='10' cy='11' r='1' fill='%236366f1'/%3E%3Ccircle cx='14' cy='11' r='1' fill='%236366f1'/%3E%3Ccircle cx='6' cy='15' r='1' fill='%236366f1'/%3E%3Ccircle cx='10' cy='15' r='1' fill='%236366f1'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+}
+
+/* Firefox date input */
+.form-input[type="date"]::-moz-calendar-picker-indicator {
+    opacity: 0;
+}
+
+/* Input with Icon */
+.form-input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.form-input-group__icon {
+    position: absolute;
+    left: var(--space-4);
+    color: var(--color-primary-500);
+    pointer-events: none;
+    transition: all 0.3s;
+    z-index: 1;
+}
+
+.form-input-group:focus-within .form-input-group__icon {
+    color: var(--color-primary-600);
+    transform: scale(1.1);
+}
+
+.form-input-group .form-input {
+    padding-left: var(--space-12);
+}
+
+/* Validation States */
+.form-group--error .form-input,
+.form-group--error .form-select,
+.form-group--error .form-textarea {
+    border-color: var(--color-error-500);
+    background: rgba(254, 242, 242, 0.3);
+}
+
+.form-group--error .form-input:focus,
+.form-group--error .form-select:focus,
+.form-group--error .form-textarea:focus {
+    box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.08), 0 4px 12px rgba(239, 68, 68, 0.12);
+}
+
+.form-error {
+    display: none;
+    margin-top: var(--space-2);
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--font-size-sm);
+    color: var(--color-error-700);
+    font-weight: var(--font-weight-medium);
+    background: var(--color-error-50);
+    border-radius: var(--radius-base);
+    border-left: 3px solid var(--color-error-500);
+}
+
+.form-group--error .form-error {
+    display: block;
+}
+
+/* Checkbox & Radio */
+.form-checkbox,
+.form-radio {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    border: 2px solid var(--color-border-strong);
+    border-radius: var(--radius-sm);
+    transition: all 0.2s;
+    appearance: none;
+    background: white;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.form-radio {
+    border-radius: var(--radius-full);
+}
+
+.form-checkbox:hover,
+.form-radio:hover {
+    border-color: var(--color-primary-500);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.08);
+}
+
+.form-checkbox:checked,
+.form-radio:checked {
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    border-color: var(--color-primary-600);
+}
+
+.form-checkbox:checked::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%) rotate(45deg);
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2.5px 2.5px 0;
+}
+
+.form-radio:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left:  50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: var(--radius-full);
+}
+
+/* Form Row (inline fields) */
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-4);
+}
+
+/* Inline Group */
+.form-group--inline {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+}
+
+.form-group--inline .form-label {
+    margin-bottom: 0;
+}
+
+/* Help text */
+.form-help {
+    display: block;
+    margin-top: var(--space-2);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+}

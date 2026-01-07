@@ -1,0 +1,205 @@
+{
+  "page":  {
+    "login": {
+      "title": "Giriş – AurumAccounting"
+    },
+    "dashboard":  {
+      "title": "Kontrol Paneli – AurumAccounting"
+    },
+    "coa": {
+      "title": "Hesap Planı – AurumAccounting"
+    },
+    "journal": {
+      "title":  "Yevmiye Kayıtları – AurumAccounting"
+    },
+    "trialBalance": {
+      "title": "Mizan – AurumAccounting"
+    }
+  },
+  "auth": {
+    "login":  {
+      "title": "Giriş Yap",
+      "subtitle":  "Muhasebe panelinize erişin",
+      "submit":  "Giriş Yap",
+      "remember": "Beni hatırla",
+      "noAccount": "Hesabınız yok mu? "
+    },
+    "register": {
+      "link": "Kayıt Ol"
+    },
+    "email": {
+      "label": "E-posta",
+      "placeholder": "siz@şirket.com"
+    },
+    "password": {
+      "label": "Şifre",
+      "placeholder":  "••••••••"
+    }
+  },
+  "header": {
+    "user": {
+      "role": {
+        "admin": "Yönetici"
+      },
+      "profile": "Profil",
+      "settings": "Ayarlar",
+      "logout": "Çıkış"
+    }
+  },
+  "sidebar": {
+    "dashboard": "Kontrol Paneli",
+    "chartOfAccounts": "Hesap Planı",
+    "journal": "Yevmiye Kayıtları",
+    "trialBalance": "Mizan"
+  },
+  "dashboard": {
+    "title": "Kontrol Paneli",
+    "cards": {
+      "revenue": "Gelir",
+      "expenses": "Giderler",
+      "profit": "Net Kar",
+      "accounts": "Hesaplar"
+    },
+    "recent": {
+      "title": "Son İşlemler",
+      "viewAll": "Tümünü Gör",
+      "table": {
+        "date": "Tarih",
+        "description": "Açıklama",
+        "account": "Hesap",
+        "debit": "Borç",
+        "credit": "Alacak"
+      },
+      "empty": "Son işlem yok"
+    }
+  },
+  "coa":  {
+    "title": "Hesap Planı",
+    "addAccount": "Hesap Ekle",
+    "search": {
+      "placeholder": "Hesap ara..."
+    },
+    "filter": {
+      "allTypes":  "Tüm Türler",
+      "asset": "Varlık",
+      "liability":  "Yükümlülük",
+      "equity": "Özkaynak",
+      "revenue":  "Gelir",
+      "expense": "Gider"
+    },
+    "table": {
+      "code": "Kod",
+      "name": "Ad",
+      "type": "Tür",
+      "balance": "Bakiye",
+      "actions": "İşlemler",
+      "empty": "Hesap bulunamadı"
+    },
+    "modal": {
+      "add": {
+        "title": "Hesap Ekle"
+      },
+      "edit": {
+        "title": "Hesabı Düzenle"
+      },
+      "code": {
+        "label": "Hesap Kodu"
+      },
+      "name": {
+        "label": "Hesap Adı"
+      },
+      "type": {
+        "label": "Tür",
+        "placeholder": "Tür seçin",
+        "asset": "Varlık",
+        "liability": "Yükümlülük",
+        "equity": "Özkaynak",
+        "revenue": "Gelir",
+        "expense": "Gider"
+      },
+      "cancel": "İptal",
+      "save":  "Kaydet"
+    }
+  },
+  "journal":  {
+    "title": "Yevmiye Kayıtları",
+    "addEntry":  "Yeni Kayıt",
+    "table":  {
+      "date": "Tarih",
+      "ref":  "Referans",
+      "description":  "Açıklama",
+      "account": "Hesap",
+      "debit": "Borç",
+      "credit": "Alacak",
+      "actions": "İşlemler",
+      "empty": "Henüz kayıt yok"
+    },
+    "modal":  {
+      "title": "Yeni Yevmiye Kaydı",
+      "date":  {
+        "label": "Tarih"
+      },
+      "ref": {
+        "label": "Referans"
+      },
+      "description": {
+        "label": "Açıklama"
+      },
+      "lines": {
+        "title": "Satırlar",
+        "account": "Hesap",
+        "debit": "Borç",
+        "credit": "Alacak",
+        "selectAccount": "Hesap seçin"
+      },
+      "addLine": "Satır Ekle",
+      "totals": {
+        "debit": "Toplam Borç:",
+        "credit":  "Toplam Alacak:",
+        "diff": "Fark:"
+      },
+      "cancel": "İptal",
+      "save": "Kaydet"
+    }
+  },
+  "reports": {
+    "trialBalance": {
+      "title": "Mizan",
+      "table": {
+        "code": "Kod",
+        "account": "Hesap",
+        "debit": "Borç",
+        "credit": "Alacak"
+      },
+      "totals":  "Toplam",
+      "empty": "Dönem seçin ve rapor oluşturun"
+    },
+    "period": {
+      "start":  "Başlangıç",
+      "end": "Bitiş"
+    },
+    "generate": "Oluştur",
+    "export": {
+      "pdf": "PDF Dışa Aktar"
+    }
+  },
+  "ui": {
+    "confirm": {
+      "title": "Onayla",
+      "yes":  "Evet",
+      "no": "Hayır",
+      "cancel": "İptal",
+      "ok": "Tamam"
+    },
+    "loading": "Yükleniyor...",
+    "saving": "Kaydediliyor...",
+    "deleting":  "Siliniyor...",
+    "search": "Ara",
+    "close": "Kapat",
+    "save": "Kaydet",
+    "edit": "Düzenle",
+    "delete": "Sil",
+    "view": "Görüntüle",
+    "actions": "İşlemler"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "revenue":  20000,
+  "expenses": 11980,
+  "profit": 8020,
+  "accounts":  66,
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-01-31"
+  },
+  "updated_at": "2026-01-14T10:30:00Z"
+}

@@ -1,0 +1,18 @@
+/* Design System */
+@import url('design-system/ui-kit.css');
+
+/* Base Styles */
+@import url('base/reset.css');
+@import url('base/typography.css');
+@import url('base/layout.css');
+
+/* Layout Components */
+@import url('components/header.css');
+@import url('components/sidebar.css');
+
+/* Page-Specific Styles */
+@import url('pages/auth.css');
+@import url('pages/dashboard.css');
+@import url('pages/chart-of-accounts.css');
+@import url('pages/journal.css');
+@import url('pages/reports.css');

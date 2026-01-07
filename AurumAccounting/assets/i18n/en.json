@@ -1,0 +1,205 @@
+{
+  "page": {
+    "login": {
+      "title": "Login – AurumAccounting"
+    },
+    "dashboard":  {
+      "title": "Dashboard – AurumAccounting"
+    },
+    "coa": {
+      "title":  "Chart of Accounts – AurumAccounting"
+    },
+    "journal": {
+      "title": "Journal Entries – AurumAccounting"
+    },
+    "trialBalance": {
+      "title": "Trial Balance – AurumAccounting"
+    }
+  },
+  "auth":  {
+    "login": {
+      "title": "Sign In",
+      "subtitle": "Access your accounting dashboard",
+      "submit": "Sign In",
+      "remember": "Remember me",
+      "noAccount": "Don't have an account?  "
+    },
+    "register":  {
+      "link": "Register"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "you@company.com"
+    },
+    "password": {
+      "label": "Password",
+      "placeholder": "••••••••"
+    }
+  },
+  "header": {
+    "user": {
+      "role": {
+        "admin": "Admin"
+      },
+      "profile": "Profile",
+      "settings": "Settings",
+      "logout": "Logout"
+    }
+  },
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "chartOfAccounts": "Chart of Accounts",
+    "journal": "Journal Entries",
+    "trialBalance": "Trial Balance"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "cards": {
+      "revenue": "Revenue",
+      "expenses": "Expenses",
+      "profit": "Net Profit",
+      "accounts": "Accounts"
+    },
+    "recent": {
+      "title": "Recent Transactions",
+      "viewAll": "View All",
+      "table": {
+        "date": "Date",
+        "description": "Description",
+        "account": "Account",
+        "debit": "Debit",
+        "credit": "Credit"
+      },
+      "empty": "No recent transactions"
+    }
+  },
+  "coa": {
+    "title": "Chart of Accounts",
+    "addAccount": "Add Account",
+    "search": {
+      "placeholder": "Search accounts..."
+    },
+    "filter": {
+      "allTypes": "All Types",
+      "asset": "Asset",
+      "liability": "Liability",
+      "equity": "Equity",
+      "revenue": "Revenue",
+      "expense": "Expense"
+    },
+    "table": {
+      "code": "Code",
+      "name": "Name",
+      "type": "Type",
+      "balance": "Balance",
+      "actions": "Actions",
+      "empty": "No accounts found"
+    },
+    "modal": {
+      "add": {
+        "title": "Add Account"
+      },
+      "edit":  {
+        "title": "Edit Account"
+      },
+      "code": {
+        "label": "Account Code"
+      },
+      "name":  {
+        "label": "Account Name"
+      },
+      "type": {
+        "label":  "Type",
+        "placeholder": "Select type",
+        "asset": "Asset",
+        "liability": "Liability",
+        "equity": "Equity",
+        "revenue": "Revenue",
+        "expense": "Expense"
+      },
+      "cancel": "Cancel",
+      "save": "Save Account"
+    }
+  },
+  "journal": {
+    "title": "Journal Entries",
+    "addEntry": "New Entry",
+    "table": {
+      "date": "Date",
+      "ref": "Ref",
+      "description": "Description",
+      "account": "Account",
+      "debit":  "Debit",
+      "credit": "Credit",
+      "actions": "Actions",
+      "empty": "No entries yet"
+    },
+    "modal": {
+      "title": "New Journal Entry",
+      "date": {
+        "label": "Date"
+      },
+      "ref": {
+        "label": "Reference"
+      },
+      "description": {
+        "label": "Description"
+      },
+      "lines": {
+        "title": "Lines",
+        "account": "Account",
+        "debit": "Debit",
+        "credit": "Credit",
+        "selectAccount": "Select account"
+      },
+      "addLine": "Add Line",
+      "totals": {
+        "debit": "Total Debit:",
+        "credit": "Total Credit:",
+        "diff": "Difference:"
+      },
+      "cancel":  "Cancel",
+      "save":  "Save Entry"
+    }
+  },
+  "reports": {
+    "trialBalance": {
+      "title": "Trial Balance",
+      "table": {
+        "code": "Code",
+        "account": "Account",
+        "debit": "Debit",
+        "credit": "Credit"
+      },
+      "totals": "Totals",
+      "empty":  "Select a period and generate report"
+    },
+    "period": {
+      "start": "From",
+      "end": "To"
+    },
+    "generate": "Generate",
+    "export": {
+      "pdf": "Export PDF"
+    }
+  },
+  "ui": {
+    "confirm": {
+      "title": "Confirm",
+      "yes": "Yes",
+      "no": "No",
+      "cancel": "Cancel",
+      "ok": "OK"
+    },
+    "loading": "Loading...",
+    "saving": "Saving...",
+    "deleting": "Deleting...",
+    "search": "Search",
+    "close": "Close",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "view": "View",
+    "actions": "Actions"
+  }
+}
