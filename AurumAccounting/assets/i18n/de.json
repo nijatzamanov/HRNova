@@ -52,7 +52,8 @@
     "journal": "Journaleinträge",
     "trialBalance": "Rohbilanz",
     "salesInvoices": "Verkaufsrechnungen",
-    "purchaseBills": "Einkaufsrechnungen"
+    "purchaseBills": "Einkaufsrechnungen",
+    "payments": "Zahlungen"
   },
   "dashboard": {
     "title": "Dashboard",

@@ -1,0 +1,127 @@
+{
+  "version": "1.0",
+  "payments": [
+    {
+      "id": "PAY-2026-001",
+      "type": "incoming",
+      "payment_number": "PAY-2026-001",
+      "payment_date": "2026-01-18",
+      "amount": 7670,
+      "method": "bank",
+      "account":  "20302",
+      "account_name": "Bank hesablarında pul (AZN)",
+      "counterparty": {
+        "id": "CUST-001",
+        "name": "ABC Şirkəti MMC",
+        "type": "customer"
+      },
+      "linked_document": {
+        "type": "invoice",
+        "id": "INV-2026-001",
+        "number": "INV-2026-001"
+      },
+      "reference": "Bank köçürməsi #12345",
+      "notes": "Faktura üzrə tam ödəniş",
+      "posted_to_journal": true,
+      "journal_entry_id": "JE-2026-020",
+      "created_at":  "2026-01-18T09:30:00Z",
+      "created_by": "Admin"
+    },
+    {
+      "id": "PAY-2026-002",
+      "type": "outgoing",
+      "payment_number": "PAY-2026-002",
+      "payment_date": "2026-01-08",
+      "amount": 13688,
+      "method": "bank",
+      "account": "20302",
+      "account_name": "Bank hesablarında pul (AZN)",
+      "counterparty": {
+        "id": "VEND-001",
+        "name": "TechStore MMC",
+        "type": "vendor"
+      },
+      "linked_document": {
+        "type": "bill",
+        "id": "BILL-2026-001",
+        "number": "BILL-2026-001"
+      },
+      "reference": "Bank köçürməsi",
+      "notes": "Avadanlıq alışı ödənişi",
+      "posted_to_journal": true,
+      "journal_entry_id": "JE-2026-021",
+      "created_at": "2026-01-08T14:00:00Z",
+      "created_by": "Admin"
+    },
+    {
+      "id":  "PAY-2026-003",
+      "type": "outgoing",
+      "payment_number": "PAY-2026-003",
+      "payment_date": "2026-01-15",
+      "amount": 3000,
+      "method": "cash",
+      "account": "1010",
+      "account_name":  "Kassada pul vəsaitləri",
+      "counterparty": {
+        "id": "VEND-003",
+        "name": "Ofis İcarəsi",
+        "type":  "vendor"
+      },
+      "linked_document": null,
+      "reference": "Nağd ödəniş",
+      "notes": "Yanvar ayı icarə",
+      "posted_to_journal": true,
+      "journal_entry_id": "JE-2026-022",
+      "created_at": "2026-01-15T10:00:00Z",
+      "created_by": "Admin"
+    },
+    {
+      "id": "PAY-2026-004",
+      "type": "incoming",
+      "payment_number": "PAY-2026-004",
+      "payment_date": "2026-01-20",
+      "amount": 5000,
+      "method": "cash",
+      "account": "1010",
+      "account_name": "Kassada pul vəsaitləri",
+      "counterparty": {
+        "id": "CUST-005",
+        "name": "Nağd müştəri",
+        "type":  "customer"
+      },
+      "linked_document": null,
+      "reference": "Nağd qəbul",
+      "notes":  "Konsaltinq xidməti nağd ödəniş",
+      "posted_to_journal": false,
+      "journal_entry_id": null,
+      "created_at":  "2026-01-20T16:00:00Z",
+      "created_by": "Admin"
+    },
+    {
+      "id": "PAY-2026-005",
+      "type": "incoming",
+      "payment_number": "PAY-2026-005",
+      "payment_date": "2026-01-22",
+      "amount":  9440,
+      "method": "bank",
+      "account": "20302",
+      "account_name": "Bank hesablarında pul (AZN)",
+      "counterparty": {
+        "id": "CUST-002",
+        "name": "XYZ Ticarət MMC",
+        "type": "customer"
+      },
+      "linked_document": {
+        "type": "invoice",
+        "id": "INV-2026-002",
+        "number":  "INV-2026-002"
+      },
+      "reference": "Bank köçürməsi #67890",
+      "notes": null,
+      "posted_to_journal": false,
+      "journal_entry_id": null,
+      "created_at": "2026-01-22T11:15:00Z",
+      "created_by": "Admin"
+    }
+  ]
+}

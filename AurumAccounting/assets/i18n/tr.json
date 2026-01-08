@@ -52,7 +52,8 @@
     "journal": "Yevmiye Kayıtları",
     "trialBalance": "Mizan",
     "salesInvoices": "Satış Faturaları",
-    "purchaseBills": "Alış Faturaları"
+    "purchaseBills": "Alış Faturaları",
+    "payments": "Ödemeler"
   },
   "dashboard": {
     "title": "Kontrol Paneli",

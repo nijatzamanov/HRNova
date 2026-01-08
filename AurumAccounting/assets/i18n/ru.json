@@ -52,7 +52,8 @@
     "journal": "Журнальные записи",
     "trialBalance": "Пробный баланс",
     "salesInvoices": "Продажные счета",
-    "purchaseBills": "Счета на покупку"
+    "purchaseBills": "Счета на покупку",
+    "payments": "Платежи"
   },
   "dashboard": {
     "title":  "Панель управления",
