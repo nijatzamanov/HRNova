@@ -50,7 +50,9 @@
     "dashboard": "Панель управления",
     "chartOfAccounts": "План счетов",
     "journal": "Журнальные записи",
-    "trialBalance": "Пробный баланс"
+    "trialBalance": "Пробный баланс",
+    "salesInvoices": "Продажные счета",
+    "purchaseBills": "Счета на покупку"
   },
   "dashboard": {
     "title":  "Панель управления",

@@ -1,0 +1,14 @@
+{
+  "sales":  {
+    "accounts_receivable": "20201",
+    "sales_revenue": "603",
+    "vat_payable": "50402"
+  },
+  "purchase":  {
+    "accounts_payable": "501",
+    "inventory": "20101",
+    "expense": "70202",
+    "vat_receivable": "50402"
+  },
+  "use_inventory_for_purchases": false
+}

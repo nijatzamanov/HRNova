@@ -50,7 +50,9 @@
     "dashboard": "İdarə Paneli",
     "chartOfAccounts": "Hesablar Planı",
     "journal":  "Jurnal Yazıları",
-    "trialBalance":  "Sınaq Balansı"
+    "trialBalance":  "Sınaq Balansı",
+    "salesInvoices": "Satış Fakturaları",
+    "purchaseBills": "Alış Qəbzləri"
   },
   "dashboard": {
     "title":  "İdarə Paneli",

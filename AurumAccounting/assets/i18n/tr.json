@@ -50,7 +50,9 @@
     "dashboard": "Kontrol Paneli",
     "chartOfAccounts": "Hesap Planı",
     "journal": "Yevmiye Kayıtları",
-    "trialBalance": "Mizan"
+    "trialBalance": "Mizan",
+    "salesInvoices": "Satış Faturaları",
+    "purchaseBills": "Alış Faturaları"
   },
   "dashboard": {
     "title": "Kontrol Paneli",

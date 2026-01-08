@@ -1,0 +1,217 @@
+{
+  "version": "1.0",
+  "invoices": [
+    {
+      "id": "INV-2026-001",
+      "type": "sales",
+      "status": "paid",
+      "invoice_number": "INV-2026-001",
+      "invoice_date": "2026-01-10",
+      "due_date": "2026-02-10",
+      "customer":  {
+        "id": "CUST-001",
+        "name": "ABC Şirkəti MMC",
+        "tax_id": "1234567890",
+        "address": "Bakı şəh., Nəsimi r-nu",
+        "email": "info@abc.az",
+        "phone": "+994501234567"
+      },
+      "lines": [
+        {
+          "id": "1",
+          "item_name": "Konsaltinq xidməti",
+          "description": "Maliyyə konsaltinqi - 3 aylıq",
+          "quantity": 1,
+          "unit_price": 5000,
+          "vat_rate": 18,
+          "vat_amount": 900,
+          "line_total": 5900
+        },
+        {
+          "id": "2",
+          "item_name": "Mühasibat xidməti",
+          "description": "Yanvar ayı mühasibat aparılması",
+          "quantity": 1,
+          "unit_price":  1500,
+          "vat_rate": 18,
+          "vat_amount": 270,
+          "line_total": 1770
+        }
+      ],
+      "subtotal": 6500,
+      "vat_total": 1170,
+      "total": 7670,
+      "notes": "Bank köçürməsi ilə ödəniş",
+      "posted_to_journal": true,
+      "journal_entry_id": "JE-2026-010",
+      "created_at": "2026-01-10T09:00:00Z",
+      "created_by": "Admin"
+    },
+    {
+      "id": "INV-2026-002",
+      "type": "sales",
+      "status": "sent",
+      "invoice_number":  "INV-2026-002",
+      "invoice_date":  "2026-01-15",
+      "due_date":  "2026-02-15",
+      "customer": {
+        "id": "CUST-002",
+        "name": "XYZ Ticarət MMC",
+        "tax_id": "9876543210",
+        "address": "Bakı şəh., Yasamal r-nu",
+        "email": "contact@xyz.az",
+        "phone": "+994551234567"
+      },
+      "lines": [
+        {
+          "id": "1",
+          "item_name": "Audit xidməti",
+          "description": "İllik maliyyə auditi",
+          "quantity": 1,
+          "unit_price": 8000,
+          "vat_rate": 18,
+          "vat_amount": 1440,
+          "line_total":  9440
+        }
+      ],
+      "subtotal": 8000,
+      "vat_total": 1440,
+      "total": 9440,
+      "notes": null,
+      "posted_to_journal": false,
+      "journal_entry_id": null,
+      "created_at":  "2026-01-15T10:30:00Z",
+      "created_by": "Admin"
+    },
+    {
+      "id": "INV-2026-003",
+      "type": "sales",
+      "status": "draft",
+      "invoice_number":  "INV-2026-003",
+      "invoice_date":  "2026-01-20",
+      "due_date": "2026-02-20",
+      "customer": {
+        "id": "CUST-003",
+        "name": "DEF İnşaat MMC",
+        "tax_id": "5555555555",
+        "address": "Sumqayıt şəh.",
+        "email": "info@def.az",
+        "phone": "+994701234567"
+      },
+      "lines": [
+        {
+          "id": "1",
+          "item_name": "Vergi məsləhəti",
+          "description": "Vergi optimallaşdırması",
+          "quantity": 5,
+          "unit_price":  800,
+          "vat_rate": 18,
+          "vat_amount": 720,
+          "line_total":  4720
+        }
+      ],
+      "subtotal": 4000,
+      "vat_total": 720,
+      "total": 4720,
+      "notes": "Qaralama",
+      "posted_to_journal": false,
+      "journal_entry_id": null,
+      "created_at": "2026-01-20T14:00:00Z",
+      "created_by": "Admin"
+    }
+  ],
+  "bills": [
+    {
+      "id": "BILL-2026-001",
+      "type": "purchase",
+      "status": "paid",
+      "bill_number": "BILL-2026-001",
+      "bill_date": "2026-01-08",
+      "due_date":  "2026-02-08",
+      "vendor": {
+        "id": "VEND-001",
+        "name": "TechStore MMC",
+        "tax_id": "1111111111",
+        "address":  "Bakı şəh., 28 May r-nu",
+        "email":  "sales@techstore.az",
+        "phone": "+994121234567"
+      },
+      "lines": [
+        {
+          "id": "1",
+          "item_name": "Kompüter",
+          "description": "Dell Latitude 5420",
+          "quantity": 5,
+          "unit_price":  2000,
+          "vat_rate": 18,
+          "vat_amount": 1800,
+          "line_total":  11800
+        },
+        {
+          "id":  "2",
+          "item_name": "Printer",
+          "description": "HP LaserJet Pro",
+          "quantity": 2,
+          "unit_price": 800,
+          "vat_rate": 18,
+          "vat_amount": 288,
+          "line_total":  1888
+        }
+      ],
+      "subtotal": 11600,
+      "vat_total": 2088,
+      "total": 13688,
+      "notes":  "Ofis avadanlığı alışı",
+      "posted_to_journal": true,
+      "journal_entry_id": "JE-2026-002",
+      "created_at":  "2026-01-08T11:00:00Z",
+      "created_by": "Admin"
+    },
+    {
+      "id": "BILL-2026-002",
+      "type": "purchase",
+      "status": "sent",
+      "bill_number": "BILL-2026-002",
+      "bill_date": "2026-01-12",
+      "due_date":  "2026-02-12",
+      "vendor": {
+        "id": "VEND-002",
+        "name": "Office Supply AZ",
+        "tax_id": "2222222222",
+        "address": "Bakı şəh., Nərimanov r-nu",
+        "email": "order@officesupply.az",
+        "phone": "+994551111111"
+      },
+      "lines": [
+        {
+          "id": "1",
+          "item_name": "Kağız A4",
+          "description": "5000 vərəq",
+          "quantity":  10,
+          "unit_price":  25,
+          "vat_rate": 18,
+          "vat_amount": 45,
+          "line_total": 295
+        },
+        {
+          "id":  "2",
+          "item_name": "Qələmlər",
+          "description": "Yazı ləvazimatları dəsti",
+          "quantity": 20,
+          "unit_price":  5,
+          "vat_rate": 18,
+          "vat_amount": 18,
+          "line_total":  118
+        }
+      ],
+      "subtotal": 350,
+      "vat_total": 63,
+      "total": 413,
+      "notes": null,
+      "posted_to_journal": false,
+      "journal_entry_id": null,
+      "created_at": "2026-01-12T15:30:00Z",
+      "created_by": "Admin"
+    }
+  ]
+}

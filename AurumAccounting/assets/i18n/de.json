@@ -50,7 +50,9 @@
     "dashboard": "Dashboard",
     "chartOfAccounts":  "Kontenplan",
     "journal": "Journaleinträge",
-    "trialBalance": "Rohbilanz"
+    "trialBalance": "Rohbilanz",
+    "salesInvoices": "Verkaufsrechnungen",
+    "purchaseBills": "Einkaufsrechnungen"
   },
   "dashboard": {
     "title": "Dashboard",

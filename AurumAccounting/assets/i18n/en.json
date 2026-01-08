@@ -50,7 +50,9 @@
     "dashboard": "Dashboard",
     "chartOfAccounts": "Chart of Accounts",
     "journal": "Journal Entries",
-    "trialBalance": "Trial Balance"
+    "trialBalance": "Trial Balance",
+    "salesInvoices": "Sales Invoices",
+    "purchaseBills": "Purchase Bills"
   },
   "dashboard": {
     "title": "Dashboard",
