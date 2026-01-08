@@ -104,24 +104,43 @@ export default {
         const treeContainer = document.getElementById('accountsTree');
         if (treeContainer) {
             treeContainer.addEventListener('click', (e) => {
+                // Check for flat view action buttons FIRST
+                const flatViewBtn = e.target.closest('.coa-flat-item__action-btn');
+                if (flatViewBtn) {
+                    e.stopPropagation();
+                    const action = flatViewBtn.dataset.action;
+                    const accountId = flatViewBtn.dataset.accountId;
+
+                    if (action === 'view-account') {
+                        this.viewAccount(accountId);
+                    } else if (action === 'edit-account') {
+                        this.editAccount(accountId);
+                    } else if (action === 'delete-account') {
+                        this.deleteAccount(accountId);
+                    }
+                    return;
+                }
+
+                // Then check for tree view elements
                 const toggleBtn = e.target.closest('.coa-tree-item__toggle');
-                const viewBtn = e.target.closest('[data-action="view-account"]');
-                const editBtn = e.target.closest('[data-action="edit-account"]');
-                const deleteBtn = e.target.closest('[data-action="delete-account"]');
+                const treeActionBtn = e.target.closest('.coa-tree-item__action-btn');
 
                 if (toggleBtn) {
                     e.stopPropagation();
                     const item = toggleBtn.closest('.coa-tree-item');
                     this.toggleTreeItem(item.dataset.accountId);
-                } else if (viewBtn) {
+                } else if (treeActionBtn) {
                     e.stopPropagation();
-                    this.viewAccount(viewBtn.dataset.accountId);
-                } else if (editBtn) {
-                    e.stopPropagation();
-                    this.editAccount(editBtn.dataset.accountId);
-                } else if (deleteBtn) {
-                    e.stopPropagation();
-                    this.deleteAccount(deleteBtn.dataset.accountId);
+                    const action = treeActionBtn.dataset.action;
+                    const accountId = treeActionBtn.dataset.accountId;
+
+                    if (action === 'view-account') {
+                        this.viewAccount(accountId);
+                    } else if (action === 'edit-account') {
+                        this.editAccount(accountId);
+                    } else if (action === 'delete-account') {
+                        this.deleteAccount(accountId);
+                    }
                 }
             });
         }
@@ -157,10 +176,26 @@ export default {
         }
 
         this.filteredAccounts = accounts;
-        this.renderAccounts();
+
+        // ← UPDATED: Call appropriate render based on view
+        if (this.currentView === 'tree') {
+            this.renderTreeView();
+        } else {
+            this.renderFlatView();
+        }
     },
 
     renderAccounts() {
+        // ← UPDATED: Route to correct view
+        if (this.currentView === 'tree') {
+            this.renderTreeView();
+        } else {
+            this.renderFlatView();
+        }
+    },
+
+    // ← EXISTING TREE VIEW (rename from renderAccounts)
+    renderTreeView() {
         const container = document.getElementById('accountsTree');
         if (!container) return;
 
@@ -168,8 +203,13 @@ export default {
 
         if (this.filteredAccounts.length === 0) {
             container.innerHTML = `
-        <div class="coa-tree__empty">
-          <p>Heç bir hesab tapılmadı</p>
+        <div class="coa-tree__empty" style="padding: var(--space-20); text-align: center; color: var(--color-text-tertiary);">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin:  0 auto var(--space-4);">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="8" x2="12" y2="12"/>
+            <line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+          <p style="font-size: var(--font-size-lg); font-weight: var(--font-weight-semibold);">Heç bir hesab tapılmadı</p>
         </div>
       `;
             return;
@@ -181,6 +221,93 @@ export default {
             const element = this.renderTreeItem(account, 0);
             container.appendChild(element);
         });
+    },
+
+    // ← NEW:  FLAT VIEW
+    renderFlatView() {
+        const container = document.getElementById('accountsTree');
+        if (!container) return;
+
+        container.innerHTML = '';
+
+        if (this.filteredAccounts.length === 0) {
+            container.innerHTML = `
+        <div class="coa-tree__empty" style="padding: var(--space-20); text-align: center; color:  var(--color-text-tertiary);">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin: 0 auto var(--space-4);">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="8" x2="12" y2="12"/>
+            <line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+          <p style="font-size: var(--font-size-lg); font-weight: var(--font-weight-semibold);">Heç bir hesab tapılmadı</p>
+        </div>
+      `;
+            return;
+        }
+
+        // Sort accounts by code
+        const sortedAccounts = [...this.filteredAccounts].sort((a, b) =>
+            a.code.localeCompare(b.code)
+        );
+
+        // Create flat list
+        const list = document.createElement('div');
+        list.className = 'coa-flat-list';
+
+        sortedAccounts.forEach(account => {
+            const item = this.renderFlatItem(account);
+            list.appendChild(item);
+        });
+
+        container.appendChild(list);
+    },
+
+    // ← NEW: FLAT ITEM RENDERER
+    renderFlatItem(account) {
+        const item = document.createElement('div');
+        item.className = 'coa-flat-item';
+        if (account.is_header) {
+            item.classList.add('coa-flat-item--header');
+        }
+
+        item.innerHTML = `
+      <div class="coa-flat-item__code">${this.escapeHtml(account.code)}</div>
+      <div class="coa-flat-item__name">${this.escapeHtml(account.name)}</div>
+      <div class="coa-flat-item__type">${this.renderTypeBadge(account.type)}</div>
+      <div class="coa-flat-item__section">
+        <span class="coa-section-badge">Bölmə ${account.section}</span>
+      </div>
+      <div class="coa-flat-item__actions">
+        <button class="coa-flat-item__action-btn" data-action="view-account" data-account-id="${account.id}" type="button" title="Bax">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+        </button>
+        ${account.is_custom ? `
+          <button class="coa-flat-item__action-btn" data-action="edit-account" data-account-id="${account.id}" type="button" title="Redaktə et">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+            </svg>
+          </button>
+          <button class="coa-flat-item__action-btn" data-action="delete-account" data-account-id="${account.id}" type="button" title="Sil">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="3 6 5 6 21 6"/>
+              <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+            </svg>
+          </button>
+        ` : ''}
+      </div>
+    `;
+
+        // Bind click events
+        item.addEventListener('click', (e) => {
+            if (!e.target.closest('button')) {
+                this.viewAccount(account.id);
+            }
+        });
+
+        return item;
     },
 
     renderTreeItem(account, level) {

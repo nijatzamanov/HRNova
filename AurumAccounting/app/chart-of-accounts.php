@@ -32,18 +32,42 @@
 
         <!-- Filters & Search -->
         <div class="coa-controls">
-            <!-- Search -->
-            <div class="form-group" style="flex: 1; margin-bottom: 0;">
-                <input
-                        type="search"
-                        id="searchAccounts"
-                        class="form-input form-input--search"
-                        placeholder="Hesab kodu və ya adı ilə axtarış..."
-                        data-i18n-placeholder="coa.search.placeholder"
-                >
+            <!-- Top Row:  Search + View Toggle -->
+            <div class="coa-controls-top">
+                <div class="form-group" style="flex: 1; margin-bottom: 0;">
+                    <input
+                            type="search"
+                            id="searchAccounts"
+                            class="form-input form-input--search"
+                            placeholder="Hesab kodu və ya adı ilə axtarış..."
+                            data-i18n-placeholder="coa. search. placeholder"
+                    >
+                </div>
+
+                <!-- View Toggle -->
+                <div class="coa-view-toggle">
+                    <button class="coa-view-btn coa-view-btn--active" data-view="tree" title="Ağac Görünüşü">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="8" y1="6" x2="21" y2="6"/>
+                            <line x1="8" y1="12" x2="21" y2="12"/>
+                            <line x1="8" y1="18" x2="21" y2="18"/>
+                            <line x1="3" y1="6" x2="3.01" y2="6"/>
+                            <line x1="3" y1="12" x2="3.01" y2="12"/>
+                            <line x1="3" y1="18" x2="3.01" y2="18"/>
+                        </svg>
+                    </button>
+                    <button class="coa-view-btn" data-view="flat" title="Siyahı Görünüşü">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="21" y1="10" x2="3" y2="10"/>
+                            <line x1="21" y1="6" x2="3" y2="6"/>
+                            <line x1="21" y1="14" x2="3" y2="14"/>
+                            <line x1="21" y1="18" x2="3" y2="18"/>
+                        </svg>
+                    </button>
+                </div>
             </div>
 
-            <!-- Section Filter -->
+            <!-- Bottom Row: Section Filters -->
             <div class="coa-section-filters">
                 <button class="coa-section-btn coa-section-btn--active" data-section="all">
                     <span>Hamısı</span>
@@ -68,28 +92,6 @@
                 </button>
                 <button class="coa-section-btn" data-section="8-9">
                     <span>8-9-Maliyyə</span>
-                </button>
-            </div>
-
-            <!-- View Toggle -->
-            <div class="coa-view-toggle">
-                <button class="coa-view-btn coa-view-btn--active" data-view="tree" title="Tree View">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="8" y1="6" x2="21" y2="6"/>
-                        <line x1="8" y1="12" x2="21" y2="12"/>
-                        <line x1="8" y1="18" x2="21" y2="18"/>
-                        <line x1="3" y1="6" x2="3.01" y2="6"/>
-                        <line x1="3" y1="12" x2="3.01" y2="12"/>
-                        <line x1="3" y1="18" x2="3.01" y2="18"/>
-                    </svg>
-                </button>
-                <button class="coa-view-btn" data-view="flat" title="Flat List">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="21" y1="10" x2="3" y2="10"/>
-                        <line x1="21" y1="6" x2="3" y2="6"/>
-                        <line x1="21" y1="14" x2="3" y2="14"/>
-                        <line x1="21" y1="18" x2="3" y2="18"/>
-                    </svg>
                 </button>
             </div>
         </div>
