@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Navigation Configuration Schema",
+  "type": "object",
+  "required": ["version", "groups"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "titleKey", "iconKey", "items"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z]+$"
+          },
+          "titleKey": {
+            "type":  "string",
+            "pattern": "^nav\\.group\\.[a-zA-Z]+$"
+          },
+          "iconKey": {
+            "type": "string"
+          },
+          "items":  {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["id", "labelKey", "route", "iconKey", "requiredRoles"],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "labelKey": {
+                  "type":  "string",
+                  "pattern": "^nav\\.item\\.[a-zA-Z]+$"
+                },
+                "route": {
+                  "type": "string",
+                  "pattern": "^/app/[a-z-]+\\.php(#[a-z]+)?$"
+                },
+                "iconKey": {
+                  "type": "string"
+                },
+                "requiredRoles": {
+                  "type":  "array",
+                  "items": {
+                    "type":  "string",
+                    "enum": ["viewer", "accountant", "admin"]
+                  }
+                },
+                "featureFlag": {
+                  "type":  ["string", "null"],
+                  "pattern": "^feature\\.[a-zA-Z]+$"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

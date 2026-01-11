@@ -46,14 +46,54 @@
       "logout":  "Выйти"
     }
   },
-  "sidebar": {
-    "dashboard": "Панель управления",
-    "chartOfAccounts": "План счетов",
-    "journal": "Журнальные записи",
-    "trialBalance": "Пробный баланс",
-    "salesInvoices": "Продажные счета",
-    "purchaseBills": "Счета на покупку",
-    "payments": "Платежи"
+  "common": {
+    "loading": "Загрузка..."
+  },
+  "nav":  {
+    "group": {
+      "overview": "Обзор",
+      "accounting": "Бухгалтерия",
+      "sales": "Продажи",
+      "purchases": "Закупки",
+      "banking": "Банк и Касса",
+      "taxes": "Налоги",
+      "reports": "Отчеты",
+      "administration": "Администрирование"
+    },
+    "item": {
+      "dashboard": "Панель управления",
+      "chartOfAccounts": "План счетов",
+      "journalEntries": "Журнальные проводки",
+      "generalLedger": "Главная книга",
+      "trialBalance": "Оборотная ведомость",
+      "periodsClosing": "Закрытие периодов",
+      "customers": "Клиенты",
+      "salesInvoices": "Счета продаж",
+      "creditNotes": "Кредитовые ноты",
+      "receipts":  "Квитанции",
+      "vendors": "Поставщики",
+      "purchaseBills":  "Счета закупок",
+      "debitNotes":  "Дебетовые ноты",
+      "vendorPayments":  "Платежи поставщикам",
+      "bankAccounts": "Банковские счета",
+      "cashboxes": "Кассы",
+      "payments":  "Платежи",
+      "bankTransactions": "Банковские операции",
+      "reconciliation": "Банковская сверка",
+      "vat": "Управление НДС",
+      "vatReport": "Отчет по НДС",
+      "taxSettings": "Настройки налогов",
+      "balanceSheet": "Балансовый отчет",
+      "profitLoss": "Прибыли и убытки",
+      "cashFlow": "Движение денежных средств",
+      "arAging": "Реестр старения дебиторов",
+      "apAging":  "Реестр старения кредиторов",
+      "companies": "Компании",
+      "usersRoles": "Пользователи и роли",
+      "numberingTemplates": "Нумерация и шаблоны",
+      "accountMapping": "Сопоставление счетов",
+      "auditLog": "Журнал аудита"
+    }
   },
   "dashboard": {
     "title":  "Панель управления",

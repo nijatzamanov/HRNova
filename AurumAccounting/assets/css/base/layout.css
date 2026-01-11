@@ -1,63 +1,53 @@
-/* App Layout */
+/* ========================================
+   APP LAYOUT
+   ======================================== */
+
 .app-page {
-    display: flex;
-    flex-direction: column;
     min-height: 100vh;
+    background: #fafaf9;
 }
 
 .app-layout {
     display: flex;
-    flex: 1;
-    padding-top: var(--header-height);
+    min-height: 100vh;
 }
 
+/* CRITICAL: Sidebar positioning */
+.app-sidebar {
+    position: fixed ! important;
+    top: 64px ! important;
+    left: 0 !important;
+    width: 280px !important;
+    height: calc(100vh - 64px) !important;
+    background: linear-gradient(180deg, #ffffff 0%, #fafaf9 100%) !important;
+    border-right: 2px solid #e7e5e4 !important;
+    overflow-y: auto !important;
+    z-index: 100 !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* Main content area */
 .app-main {
     flex: 1;
-    padding: var(--space-6);
-    overflow-x: hidden;
-    margin-left: var(--sidebar-width);
-    transition: margin-left var(--transition-base);
+    margin-left: 280px;
+    padding: 2rem;
+    min-height: calc(100vh - 64px);
+    margin-top: 64px;
 }
 
-.app-main__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--space-4);
-    margin-bottom: var(--space-6);
-    flex-wrap: wrap;
-}
+/* Responsive */
+@media (max-width:  768px) {
+    .app-sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s;
+    }
 
-.app-main__title {
-    font-size: var(--font-size-2xl);
-    font-weight: var(--font-weight-bold);
-    color: var(--color-text);
-}
+    .app-sidebar--open {
+        transform: translateX(0);
+    }
 
-/* Sidebar collapsed state */
-body.sidebar-collapsed .app-main {
-    margin-left: var(--sidebar-collapsed-width);
-}
-
-/* Mobile responsive */
-@media (max-width: 1024px) {
     .app-main {
         margin-left: 0;
-        padding: var(--space-4);
-    }
-
-    .app-main__header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
-
-@media (max-width: 768px) {
-    .app-main {
-        padding: var(--space-3);
-    }
-
-    .app-main__title {
-        font-size: var(--font-size-xl);
     }
 }

@@ -6,28 +6,28 @@
     "dashboard":  {
       "title": "Dashboard – AurumAccounting"
     },
-    "coa": {
-      "title":  "Chart of Accounts – AurumAccounting"
+    "coa":  {
+      "title": "Chart of Accounts – AurumAccounting"
     },
     "journal": {
-      "title": "Journal Entries – AurumAccounting"
+      "title":  "Journal Entries – AurumAccounting"
     },
     "trialBalance": {
-      "title": "Trial Balance – AurumAccounting"
+      "title":  "Trial Balance – AurumAccounting"
     }
   },
-  "auth":  {
+  "auth": {
     "login": {
       "title": "Sign In",
-      "subtitle": "Access your accounting dashboard",
+      "subtitle": "Access your accounting panel",
       "submit": "Sign In",
       "remember": "Remember me",
-      "noAccount": "Don't have an account?  "
+      "noAccount": "Don't have an account?"
     },
     "register":  {
-      "link": "Register"
+      "link": "Sign up"
     },
-    "email": {
+    "email":  {
       "label": "Email",
       "placeholder": "you@company.com"
     },
@@ -39,21 +39,61 @@
   "header": {
     "user": {
       "role": {
-        "admin": "Admin"
+        "admin": "Administrator"
       },
-      "profile": "Profile",
-      "settings": "Settings",
-      "logout": "Logout"
+      "profile":  "Profile",
+      "settings":  "Settings",
+      "logout":  "Logout"
     }
   },
-  "sidebar": {
-    "dashboard": "Dashboard",
-    "chartOfAccounts": "Chart of Accounts",
-    "journal": "Journal Entries",
-    "trialBalance": "Trial Balance",
-    "salesInvoices": "Sales Invoices",
-    "purchaseBills": "Purchase Bills",
-    "payments": "Payments"
+  "common": {
+    "loading": "Loading..."
+  },
+  "nav":  {
+    "group": {
+      "overview": "Overview",
+      "accounting": "Accounting",
+      "sales": "Sales",
+      "purchases": "Purchases",
+      "banking": "Banking & Cash",
+      "taxes": "Taxes",
+      "reports": "Reports",
+      "administration": "Administration"
+    },
+    "item": {
+      "dashboard": "Dashboard",
+      "chartOfAccounts": "Chart of Accounts",
+      "journalEntries": "Journal Entries",
+      "generalLedger": "General Ledger",
+      "trialBalance": "Trial Balance",
+      "periodsClosing": "Periods & Closing",
+      "customers": "Customers",
+      "salesInvoices": "Sales Invoices",
+      "creditNotes": "Credit Notes",
+      "receipts": "Receipts",
+      "vendors": "Vendors",
+      "purchaseBills": "Purchase Bills",
+      "debitNotes": "Debit Notes",
+      "vendorPayments": "Vendor Payments",
+      "bankAccounts": "Bank Accounts",
+      "cashboxes": "Cashboxes",
+      "payments": "Payments",
+      "bankTransactions": "Bank Transactions",
+      "reconciliation": "Bank Reconciliation",
+      "vat": "VAT Management",
+      "vatReport": "VAT Report",
+      "taxSettings": "Tax Settings",
+      "balanceSheet": "Balance Sheet",
+      "profitLoss": "Profit & Loss",
+      "cashFlow": "Cash Flow",
+      "arAging": "A/R Aging",
+      "apAging": "A/P Aging",
+      "companies": "Companies",
+      "usersRoles": "Users & Roles",
+      "numberingTemplates": "Numbering & Templates",
+      "accountMapping": "Account Mapping",
+      "auditLog": "Audit Log"
+    }
   },
   "dashboard": {
     "title": "Dashboard",
@@ -102,17 +142,17 @@
       "add": {
         "title": "Add Account"
       },
-      "edit":  {
+      "edit": {
         "title": "Edit Account"
       },
-      "code": {
+      "code":  {
         "label": "Account Code"
       },
-      "name":  {
-        "label": "Account Name"
+      "name": {
+        "label":  "Account Name"
       },
       "type": {
-        "label":  "Type",
+        "label": "Type",
         "placeholder": "Select type",
         "asset": "Asset",
         "liability": "Liability",
@@ -121,21 +161,21 @@
         "expense": "Expense"
       },
       "cancel": "Cancel",
-      "save": "Save Account"
+      "save": "Save"
     }
   },
   "journal": {
     "title": "Journal Entries",
-    "addEntry": "New Entry",
+    "addEntry":  "New Entry",
     "table": {
       "date": "Date",
-      "ref": "Ref",
+      "ref": "Reference",
       "description": "Description",
       "account": "Account",
-      "debit":  "Debit",
-      "credit": "Credit",
-      "actions": "Actions",
-      "empty": "No entries yet"
+      "debit": "Debit",
+      "credit":  "Credit",
+      "actions":  "Actions",
+      "empty":  "No entries yet"
     },
     "modal": {
       "title": "New Journal Entry",
@@ -143,7 +183,7 @@
         "label": "Date"
       },
       "ref": {
-        "label": "Reference"
+        "label":  "Reference"
       },
       "description": {
         "label": "Description"
@@ -161,8 +201,8 @@
         "credit": "Total Credit:",
         "diff": "Difference:"
       },
-      "cancel":  "Cancel",
-      "save":  "Save Entry"
+      "cancel": "Cancel",
+      "save": "Save"
     }
   },
   "reports": {
@@ -174,11 +214,11 @@
         "debit": "Debit",
         "credit": "Credit"
       },
-      "totals": "Totals",
+      "totals":  "Total",
       "empty":  "Select a period and generate report"
     },
     "period": {
-      "start": "From",
+      "start":  "From",
       "end": "To"
     },
     "generate": "Generate",
@@ -194,7 +234,7 @@
       "cancel": "Cancel",
       "ok": "OK"
     },
-    "loading": "Loading...",
+    "loading": "Loading.. .",
     "saving": "Saving...",
     "deleting": "Deleting...",
     "search": "Search",

@@ -1,0 +1,385 @@
+{
+  "version": "1.0.0",
+  "groups": [
+    {
+      "id": "overview",
+      "titleKey": "nav.group.overview",
+      "iconKey": "layout-dashboard",
+      "items": [
+        {
+          "id": "dashboard",
+          "labelKey": "nav.item.dashboard",
+          "route": "../app/dashboard.php",
+          "iconKey": "home",
+          "requiredRoles": ["viewer", "accountant", "admin"],
+          "featureFlag": null
+        }
+      ]
+    },
+    {
+      "id": "accounting",
+      "titleKey": "nav.group.accounting",
+      "iconKey": "calculator",
+      "items": [
+        {
+          "id": "chartOfAccounts",
+          "labelKey": "nav.item.chartOfAccounts",
+          "route":  "../app/chart-of-accounts.php",
+          "iconKey": "list-tree",
+          "requiredRoles": ["accountant", "admin"],
+          "featureFlag": null
+        },
+        {
+          "id": "journalEntries",
+          "labelKey": "nav.item.journalEntries",
+          "route": "../app/journal.php",
+          "iconKey":  "book-open",
+          "requiredRoles": ["accountant", "admin"],
+          "featureFlag": null
+        },
+        {
+          "id":  "accountingReports",
+          "labelKey": "nav.item.accountingReports",
+          "iconKey": "file-text",
+          "requiredRoles": ["accountant", "admin"],
+          "featureFlag": null,
+          "hasSubItems": true,
+          "subItems": [
+            {
+              "id": "generalLedger",
+              "labelKey": "nav.item.generalLedger",
+              "route": "../app/reports-general-ledger.php",
+              "requiredRoles": ["accountant", "admin"],
+              "featureFlag": null
+            },
+            {
+              "id": "trialBalance",
+              "labelKey": "nav.item.trialBalance",
+              "route": "../app/reports-trial-balance.php",
+              "requiredRoles": ["accountant", "admin"],
+              "featureFlag":  null
+            },
+            {
+              "id": "accountStatement",
+              "labelKey": "nav.item.accountStatement",
+              "route": "../app/account-statement.php",
+              "requiredRoles": ["accountant", "admin"],
+              "featureFlag": "feature.accountStatement"
+            }
+          ]
+        },
+        {
+          "id":  "periodsClosing",
+          "labelKey":  "nav.item.periodsClosing",
+          "route": "../app/periods-closing.php",
+          "iconKey": "lock",
+          "requiredRoles": ["admin"],
+          "featureFlag":  "feature.periodsClosing"
+        }
+      ]
+    },
+    {
+      "id":  "sales",
+      "titleKey": "nav.group.sales",
+      "iconKey": "trending-up",
+      "items":  [
+        {
+          "id": "customers",
+          "labelKey": "nav.item.customers",
+          "route": "../app/customers.php",
+          "iconKey": "users",
+          "requiredRoles": ["accountant", "admin"],
+          "featureFlag": "feature.customers"
+        },
+        {
+          "id": "salesInvoices",
+          "labelKey": "nav.item.salesInvoices",
+          "route":  "../app/sales-invoices.php",
+          "iconKey":  "file-text",
+          "requiredRoles": ["accountant", "admin"],
+          "featureFlag": null
+        },
+        {
+          "id": "salesDocuments",
+          "labelKey":  "nav.item.salesDocuments",
+          "iconKey": "file-text",
+          "requiredRoles": ["accountant", "admin"],
+          "featureFlag": null,
+          "hasSubItems": true,
+          "subItems": [
+            {
+              "id":  "creditNotes",
+              "labelKey": "nav.item.creditNotes",
+              "route": "../app/credit-notes.php",
+              "requiredRoles": ["accountant", "admin"],
+              "featureFlag": "feature.creditNotes"
+            },
+            {
+              "id": "receipts",
+              "labelKey":  "nav.item.receipts",
+              "route": "../app/receipts.php",
+              "requiredRoles": ["accountant", "admin"],
+              "featureFlag": "feature.receipts"
+            },
+            {
+              "id":  "deliveryNotes",
+              "labelKey": "nav.item.deliveryNotes",
+              "route": "../app/delivery-notes.php",
+              "requiredRoles": ["accountant", "admin"],
+              "featureFlag":  "feature.deliveryNotes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "purchases",
+      "titleKey": "nav.group.purchases",
+      "iconKey": "shopping-cart",
+      "items":  [
+        {
+          "id": "vendors",
+          "labelKey": "nav.item.vendors",
+          "route": "../app/vendors.php",
+          "iconKey":  "briefcase",
+          "requiredRoles": ["accountant", "admin"],
+          "featureFlag":  "feature.vendors"
+        },
+        {
+          "id":  "purchaseBills",
+          "labelKey":  "nav.item.purchaseBills",
+          "route": "../app/purchase-bills.php",
+          "iconKey": "file-input",
+          "requiredRoles": ["accountant", "admin"],
+          "featureFlag": null
+        },
+        {
+          "id": "purchaseDocuments",
+          "labelKey":  "nav.item.purchaseDocuments",
+          "iconKey": "file-text",
+          "requiredRoles": ["accountant", "admin"],
+          "featureFlag": null,
+          "hasSubItems": true,
+          "subItems": [
+            {
+              "id": "debitNotes",
+              "labelKey": "nav.item.debitNotes",
+              "route":  "../app/debit-notes.php",
+              "requiredRoles": ["accountant", "admin"],
+              "featureFlag":  "feature.debitNotes"
+            },
+            {
+              "id": "purchaseOrders",
+              "labelKey":  "nav.item.purchaseOrders",
+              "route": "../app/purchase-orders.php",
+              "requiredRoles":  ["accountant", "admin"],
+              "featureFlag": "feature.purchaseOrders"
+            }
+          ]
+        },
+        {
+          "id":  "vendorPayments",
+          "labelKey": "nav.item.vendorPayments",
+          "route": "../app/payments.php",
+          "iconKey":  "credit-card",
+          "requiredRoles": ["accountant", "admin"],
+          "featureFlag": null
+        }
+      ]
+    },
+    {
+      "id": "banking",
+      "titleKey": "nav.group.banking",
+      "iconKey": "building",
+      "items": [
+        {
+          "id": "bankAccounts",
+          "labelKey": "nav.item.bankAccounts",
+          "route":  "../app/bank-accounts.php",
+          "iconKey": "landmark",
+          "requiredRoles": ["accountant", "admin"],
+          "featureFlag": "feature.bankAccounts"
+        },
+        {
+          "id": "cashboxes",
+          "labelKey":  "nav.item.cashboxes",
+          "route": "../app/cashboxes.php",
+          "iconKey": "wallet",
+          "requiredRoles":  ["accountant", "admin"],
+          "featureFlag": "feature.cashboxes"
+        },
+        {
+          "id":  "bankTransactions",
+          "labelKey": "nav.item.bankTransactions",
+          "route": "../app/bank-transactions.php",
+          "iconKey":  "arrow-left-right",
+          "requiredRoles": ["accountant", "admin"],
+          "featureFlag":  "feature.bankTransactions"
+        },
+        {
+          "id":  "reconciliation",
+          "labelKey":  "nav.item.reconciliation",
+          "route": "../app/bank-reconciliation.php",
+          "iconKey": "check-circle",
+          "requiredRoles": ["accountant", "admin"],
+          "featureFlag": "feature.bankReconciliation"
+        }
+      ]
+    },
+    {
+      "id": "taxes",
+      "titleKey": "nav.group.taxes",
+      "iconKey": "percent",
+      "items": [
+        {
+          "id": "vat",
+          "labelKey":  "nav.item.vat",
+          "route": "../app/vat.php",
+          "iconKey": "file-badge",
+          "requiredRoles": ["accountant", "admin"],
+          "featureFlag": "feature.vat"
+        },
+        {
+          "id":  "vatReport",
+          "labelKey": "nav.item.vatReport",
+          "route": "../app/vat-report.php",
+          "iconKey": "file-bar-chart",
+          "requiredRoles": ["accountant", "admin"],
+          "featureFlag": "feature.vatReport"
+        },
+        {
+          "id": "taxSettings",
+          "labelKey": "nav.item.taxSettings",
+          "route": "../app/tax-settings.php",
+          "iconKey": "settings",
+          "requiredRoles": ["admin"],
+          "featureFlag":  "feature.taxSettings"
+        }
+      ]
+    },
+    {
+      "id": "reports",
+      "titleKey":  "nav.group.reports",
+      "iconKey": "bar-chart",
+      "items":  [
+        {
+          "id": "financialStatements",
+          "labelKey":  "nav.item.financialStatements",
+          "iconKey": "grid",
+          "requiredRoles": ["viewer", "accountant", "admin"],
+          "featureFlag": null,
+          "hasSubItems": true,
+          "subItems": [
+            {
+              "id":  "balanceSheet",
+              "labelKey": "nav.item.balanceSheet",
+              "route": "../app/reports-financial-statements.php",
+              "requiredRoles": ["viewer", "accountant", "admin"],
+              "featureFlag": null
+            },
+            {
+              "id": "profitLoss",
+              "labelKey": "nav.item.profitLoss",
+              "route": "../app/reports-financial-statements.php#income",
+              "requiredRoles": ["viewer", "accountant", "admin"],
+              "featureFlag": null
+            },
+            {
+              "id": "cashFlow",
+              "labelKey": "nav.item.cashFlow",
+              "route": "../app/reports-cash-flow.php",
+              "requiredRoles": ["viewer", "accountant", "admin"],
+              "featureFlag": "feature.cashFlowReport"
+            }
+          ]
+        },
+        {
+          "id": "agingReports",
+          "labelKey":  "nav.item.agingReports",
+          "iconKey":  "clock",
+          "requiredRoles": ["viewer", "accountant", "admin"],
+          "featureFlag": null,
+          "hasSubItems": true,
+          "subItems": [
+            {
+              "id":  "arAging",
+              "labelKey": "nav.item.arAging",
+              "route": "../app/reports-ar-aging.php",
+              "requiredRoles": ["viewer", "accountant", "admin"],
+              "featureFlag": "feature.arAging"
+            },
+            {
+              "id": "apAging",
+              "labelKey":  "nav.item.apAging",
+              "route": "../app/reports-ap-aging.php",
+              "requiredRoles": ["viewer", "accountant", "admin"],
+              "featureFlag": "feature.apAging"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id":  "administration",
+      "titleKey": "nav.group.administration",
+      "iconKey": "shield",
+      "items": [
+        {
+          "id": "companies",
+          "labelKey": "nav.item.companies",
+          "route": "../app/companies.php",
+          "iconKey":  "building-2",
+          "requiredRoles": ["admin"],
+          "featureFlag":  "feature.multiCompany"
+        },
+        {
+          "id": "usersRoles",
+          "labelKey":  "nav.item.usersRoles",
+          "route": "../app/users-roles.php",
+          "iconKey": "user-cog",
+          "requiredRoles": ["admin"],
+          "featureFlag": "feature.userManagement"
+        },
+        {
+          "id": "systemSettings",
+          "labelKey":  "nav.item.systemSettings",
+          "iconKey": "settings",
+          "requiredRoles": ["admin"],
+          "featureFlag": null,
+          "hasSubItems": true,
+          "subItems": [
+            {
+              "id":  "numberingTemplates",
+              "labelKey":  "nav.item.numberingTemplates",
+              "route": "../app/numbering-templates.php",
+              "requiredRoles": ["admin"],
+              "featureFlag": "feature.numberingTemplates"
+            },
+            {
+              "id": "accountMapping",
+              "labelKey": "nav.item.accountMapping",
+              "route": "../app/account-mapping.php",
+              "requiredRoles": ["admin"],
+              "featureFlag": null
+            },
+            {
+              "id": "emailTemplates",
+              "labelKey": "nav.item.emailTemplates",
+              "route": "../app/email-templates.php",
+              "requiredRoles":  ["admin"],
+              "featureFlag": "feature.emailTemplates"
+            }
+          ]
+        },
+        {
+          "id":  "auditLog",
+          "labelKey": "nav.item.auditLog",
+          "route": "../app/audit-log.php",
+          "iconKey": "file-search",
+          "requiredRoles": ["admin"],
+          "featureFlag": "feature.auditLog"
+        }
+      ]
+    }
+  ]
+}

@@ -15,7 +15,10 @@
 
     <main class="app-main">
         <div class="app-main__header">
-            <h1 class="app-main__title" data-i18n="dashboard.title">Dashboard</h1>
+            <div>
+                <h1 class="app-main__title" data-i18n="dashboard.title">Dashboard</h1>
+                <p class="app-main__subtitle">Xoş gəlmisiniz</p>
+            </div>
         </div>
 
         <!-- Summary Cards -->

@@ -46,14 +46,54 @@
       "logout": "Abmelden"
     }
   },
-  "sidebar": {
-    "dashboard": "Dashboard",
-    "chartOfAccounts":  "Kontenplan",
-    "journal": "Journaleinträge",
-    "trialBalance": "Rohbilanz",
-    "salesInvoices": "Verkaufsrechnungen",
-    "purchaseBills": "Einkaufsrechnungen",
-    "payments": "Zahlungen"
+  "common":  {
+    "loading": "Wird geladen..."
+  },
+  "nav": {
+    "group": {
+      "overview":  "Übersicht",
+      "accounting": "Buchhaltung",
+      "sales": "Verkauf",
+      "purchases": "Einkauf",
+      "banking": "Bank & Kasse",
+      "taxes": "Steuern",
+      "reports": "Berichte",
+      "administration": "Verwaltung"
+    },
+    "item": {
+      "dashboard": "Dashboard",
+      "chartOfAccounts": "Kontenplan",
+      "journalEntries": "Journalbuchungen",
+      "generalLedger": "Hauptbuch",
+      "trialBalance":  "Probebilanz",
+      "periodsClosing": "Periodenabschluss",
+      "customers": "Kunden",
+      "salesInvoices":  "Verkaufsrechnungen",
+      "creditNotes":  "Gutschriften",
+      "receipts": "Quittungen",
+      "vendors": "Lieferanten",
+      "purchaseBills":  "Einkaufsrechnungen",
+      "debitNotes": "Lastschriften",
+      "vendorPayments": "Lieferantenzahlungen",
+      "bankAccounts": "Bankkonten",
+      "cashboxes": "Kassen",
+      "payments": "Zahlungen",
+      "bankTransactions": "Banktransaktionen",
+      "reconciliation": "Bankabstimmung",
+      "vat": "Mehrwertsteuerverwaltung",
+      "vatReport": "Mehrwertsteuerbericht",
+      "taxSettings": "Steuereinstellungen",
+      "balanceSheet": "Bilanz",
+      "profitLoss": "Gewinn & Verlust",
+      "cashFlow":  "Cashflow",
+      "arAging": "Forderungen Alterung",
+      "apAging": "Verbindlichkeiten Alterung",
+      "companies": "Unternehmen",
+      "usersRoles": "Benutzer & Rollen",
+      "numberingTemplates": "Nummerierung & Vorlagen",
+      "accountMapping": "Kontozuordnung",
+      "auditLog": "Prüfprotokoll"
+    }
   },
   "dashboard": {
     "title": "Dashboard",

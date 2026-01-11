@@ -46,14 +46,54 @@
       "logout": "Çıkış"
     }
   },
-  "sidebar": {
-    "dashboard": "Kontrol Paneli",
-    "chartOfAccounts": "Hesap Planı",
-    "journal": "Yevmiye Kayıtları",
-    "trialBalance": "Mizan",
-    "salesInvoices": "Satış Faturaları",
-    "purchaseBills": "Alış Faturaları",
-    "payments": "Ödemeler"
+  "common": {
+    "loading": "Yükleniyor..."
+  },
+  "nav": {
+    "group": {
+      "overview": "Genel Bakış",
+      "accounting": "Muhasebe",
+      "sales": "Satışlar",
+      "purchases": "Satın Almalar",
+      "banking": "Banka ve Kasa",
+      "taxes": "Vergiler",
+      "reports": "Raporlar",
+      "administration": "Yönetim"
+    },
+    "item": {
+      "dashboard": "Kontrol Paneli",
+      "chartOfAccounts": "Hesap Planı",
+      "journalEntries": "Yevmiye Kayıtları",
+      "generalLedger": "Genel Muhasebe Defteri",
+      "trialBalance": "Mizanı",
+      "periodsClosing":  "Dönem Kapanışı",
+      "customers": "Müşteriler",
+      "salesInvoices":  "Satış Faturaları",
+      "creditNotes": "Kredi Notları",
+      "receipts": "Makbuzlar",
+      "vendors": "Tedarikçiler",
+      "purchaseBills": "Satın Alma Faturaları",
+      "debitNotes": "Borç Notları",
+      "vendorPayments": "Tedarikçi Ödemeleri",
+      "bankAccounts": "Banka Hesapları",
+      "cashboxes": "Kasalar",
+      "payments": "Ödemeler",
+      "bankTransactions": "Banka Hareketleri",
+      "reconciliation": "Banka Mutabakatı",
+      "vat": "KDV Yönetimi",
+      "vatReport": "KDV Raporu",
+      "taxSettings": "Vergi Ayarları",
+      "balanceSheet": "Bilanço",
+      "profitLoss": "Kâr ve Zarar",
+      "cashFlow":  "Nakit Akışı",
+      "arAging":  "Alacak Yaşlandırma",
+      "apAging":  "Borç Yaşlandırma",
+      "companies": "Şirketler",
+      "usersRoles": "Kullanıcılar ve Roller",
+      "numberingTemplates": "Numaralandırma ve Şablonlar",
+      "accountMapping": "Hesap Eşleştirme",
+      "auditLog":  "Denetim Günlüğü"
+    }
   },
   "dashboard": {
     "title": "Kontrol Paneli",

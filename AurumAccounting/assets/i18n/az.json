@@ -9,7 +9,7 @@
     "coa": {
       "title": "Hesablar Planı – AurumAccounting"
     },
-    "journal":  {
+    "journal": {
       "title": "Jurnal Yazıları – AurumAccounting"
     },
     "trialBalance": {
@@ -18,11 +18,11 @@
   },
   "auth": {
     "login": {
-      "title":  "Daxil Ol",
+      "title": "Daxil Ol",
       "subtitle": "Mühasibat panelinizə daxil olun",
       "submit": "Daxil Ol",
       "remember": "Yadda saxla",
-      "noAccount": "Hesabınız yoxdur? "
+      "noAccount": "Hesabınız yoxdur?"
     },
     "register":  {
       "link": "Qeydiyyatdan keç"
@@ -37,7 +37,7 @@
     }
   },
   "header": {
-    "user":  {
+    "user": {
       "role": {
         "admin": "Administrator"
       },
@@ -46,29 +46,79 @@
       "logout": "Çıxış"
     }
   },
-  "sidebar": {
-    "dashboard": "İdarə Paneli",
-    "chartOfAccounts": "Hesablar Planı",
-    "journal":  "Jurnal Yazıları",
-    "trialBalance":  "Sınaq Balansı",
-    "salesInvoices": "Satış Fakturaları",
-    "purchaseBills": "Alış Qəbzləri",
-    "payments": "Ödənişlər"
+  "common": {
+    "loading": "Yüklənir..."
+  },
+  "nav": {
+    "group": {
+      "overview": "İcmal",
+      "accounting": "Mühasibat",
+      "sales": "Satış",
+      "purchases": "Alış",
+      "banking": "Bank və Kassa",
+      "taxes": "Vergilər",
+      "reports": "Hesabatlar",
+      "administration": "İdarəetmə"
+    },
+    "item": {
+      "dashboard": "İdarə Paneli",
+      "chartOfAccounts": "Hesablar Planı",
+      "journalEntries": "Jurnal Yazıları",
+      "generalLedger": "Baş Mühasibat",
+      "trialBalance": "Sınaq Balansı",
+      "periodsClosing": "Dövrlərin Bağlanışı",
+      "accountingReports": "Mühasibat Hesabatları",
+      "accountStatement": "Hesab Bəyanatı",
+      "customers": "Müştərilər",
+      "salesInvoices": "Satış Fakturaları",
+      "creditNotes": "Kredit Qeydləri",
+      "receipts": "Qəbzlər",
+      "salesDocuments": "Satış Sənədləri",
+      "deliveryNotes": "Çatdırılma Qeydləri",
+      "vendors": "Təchizatçılar",
+      "purchaseBills": "Alış Qaimələri",
+      "debitNotes": "Debet Qeydləri",
+      "vendorPayments": "Ödənişlər",
+      "purchaseDocuments": "Alış Sənədləri",
+      "purchaseOrders": "Alış Sifarişləri",
+      "bankAccounts": "Bank Hesabları",
+      "cashboxes": "Kassalar",
+      "payments": "Ödənişlər",
+      "bankTransactions": "Bank Əməliyyatları",
+      "reconciliation": "Bank Uzlaşdırması",
+      "vat": "ƏDV İdarəetməsi",
+      "vatReport": "ƏDV Hesabatı",
+      "taxSettings": "Vergi Tənzimləmələri",
+      "balanceSheet": "Balans Hesabatı",
+      "profitLoss": "Mənfəət və Zərər",
+      "cashFlow": "Pul Hərəkəti",
+      "arAging": "Debitor Yaşlandırma",
+      "apAging": "Kreditor Yaşlandırma",
+      "financialStatements": "Maliyyə Hesabatları",
+      "agingReports": "Yaşlanma Hesabatları",
+      "companies": "Şirkətlər",
+      "usersRoles": "İstifadəçilər və Rollar",
+      "numberingTemplates": "Nömrələmə Şablonları",
+      "accountMapping": "Hesab Əlaqələndirməsi",
+      "auditLog": "Audit Jurnalı",
+      "systemSettings": "Sistem Parametrləri",
+      "emailTemplates": "E-poçt Şablonları"
+    }
   },
   "dashboard": {
-    "title":  "İdarə Paneli",
+    "title": "İdarə Paneli",
     "cards": {
       "revenue": "Gəlir",
       "expenses": "Xərclər",
-      "profit":  "Xalis Mənfəət",
+      "profit": "Xalis Mənfəət",
       "accounts": "Hesablar"
     },
     "recent": {
       "title": "Son Əməliyyatlar",
       "viewAll": "Hamısına Bax",
-      "table":  {
+      "table": {
         "date": "Tarix",
-        "description":  "Təsvir",
+        "description": "Təsvir",
         "account": "Hesab",
         "debit": "Debet",
         "credit": "Kredit"
@@ -77,23 +127,23 @@
     }
   },
   "coa": {
-    "title": "Hesablar Planı",
+    "title":  "Hesablar Planı",
     "addAccount": "Hesab Əlavə Et",
     "search": {
       "placeholder": "Hesabları axtar..."
     },
     "filter": {
-      "allTypes":  "Bütün Növlər",
+      "allTypes": "Bütün Növlər",
       "asset": "Aktiv",
       "liability": "Öhdəlik",
-      "equity":  "Kapital",
+      "equity": "Kapital",
       "revenue": "Gəlir",
       "expense": "Xərc"
     },
     "table": {
       "code": "Kod",
-      "name":  "Ad",
-      "type":  "Növ",
+      "name": "Ad",
+      "type": "Növ",
       "balance": "Balans",
       "actions": "Əməliyyatlar",
       "empty": "Hesab tapılmadı"
@@ -102,22 +152,22 @@
       "add": {
         "title": "Hesab Əlavə Et"
       },
-      "edit": {
+      "edit":  {
         "title": "Hesabı Redaktə Et"
       },
       "code": {
         "label": "Hesab Kodu"
       },
-      "name": {
-        "label":  "Hesab Adı"
+      "name":  {
+        "label": "Hesab Adı"
       },
       "type": {
         "label": "Növ",
         "placeholder": "Növ seçin",
-        "asset":  "Aktiv",
+        "asset": "Aktiv",
         "liability": "Öhdəlik",
         "equity": "Kapital",
-        "revenue":  "Gəlir",
+        "revenue": "Gəlir",
         "expense": "Xərc"
       },
       "cancel": "Ləğv Et",
@@ -127,14 +177,14 @@
   "journal": {
     "title": "Jurnal Yazıları",
     "addEntry": "Yeni Yazı",
-    "table":  {
+    "table": {
       "date": "Tarix",
-      "ref":  "İstinad",
+      "ref": "İstinad",
       "description": "Təsvir",
       "account": "Hesab",
       "debit": "Debet",
       "credit": "Kredit",
-      "actions":  "Əməliyyatlar",
+      "actions": "Əməliyyatlar",
       "empty": "Hələ yazı yoxdur"
     },
     "modal": {
@@ -142,27 +192,27 @@
       "date": {
         "label": "Tarix"
       },
-      "ref": {
-        "label":  "İstinad"
+      "ref":  {
+        "label": "İstinad"
       },
       "description": {
         "label": "Təsvir"
       },
       "lines": {
-        "title":  "Sətrlər",
+        "title": "Sətrlər",
         "account": "Hesab",
         "debit": "Debet",
         "credit": "Kredit",
         "selectAccount": "Hesab seçin"
       },
-      "addLine":  "Sətir Əlavə Et",
+      "addLine": "Sətir Əlavə Et",
       "totals": {
         "debit": "Ümumi Debet:",
         "credit": "Ümumi Kredit:",
-        "diff":  "Fərq:"
+        "diff": "Fərq:"
       },
       "cancel": "Ləğv Et",
-      "save":  "Yadda Saxla"
+      "save": "Yadda Saxla"
     }
   },
   "reports": {
@@ -170,7 +220,7 @@
       "title": "Sınaq Balansı",
       "table": {
         "code": "Kod",
-        "account":  "Hesab",
+        "account": "Hesab",
         "debit": "Debet",
         "credit": "Kredit"
       },
@@ -188,19 +238,19 @@
   },
   "ui": {
     "confirm": {
-      "title":  "Təsdiq Et",
+      "title": "Təsdiq Et",
       "yes": "Bəli",
       "no": "Xeyr",
       "cancel":  "Ləğv Et",
       "ok": "OK"
     },
-    "loading":  "Yüklənir...",
-    "saving":  "Saxlanılır...",
+    "loading": "Yüklənir...",
+    "saving": "Saxlanılır...",
     "deleting": "Silinir...",
     "search": "Axtar",
     "close": "Bağla",
     "save": "Saxla",
-    "edit":  "Redaktə",
+    "edit": "Redaktə",
     "delete": "Sil",
     "view": "Bax",
     "actions": "Əməliyyatlar"
