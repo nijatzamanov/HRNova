@@ -1,13 +1,6 @@
 /**
  * Aurum Accounting - Main Entry Point
- *
- * Initializes all core systems:
- * - i18n (translations)
- * - Navigation
- * - User session
- * - Page-specific modules
- *
- * @version 1.0.0
+ * @version 1.3.0
  */
 
 import { AurumI18n } from './core/i18n.js';
@@ -27,7 +20,7 @@ class AurumApp {
      * Initialize application
      */
     async init() {
-        console.log('🚀 Aurum Accounting v1.0.0 starting...');
+        console.log('🚀 Aurum Accounting v1.3.0 starting.. .');
         console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
 
         try {
@@ -101,13 +94,13 @@ class AurumApp {
                 name: 'Admin User',
                 email: 'admin@aurum.az',
                 company: 'Demo Company',
-                roles: ['admin', 'accountant', 'viewer'], // ← BÜTÜN ROLLAR
+                roles: ['admin', 'accountant', 'viewer'],
                 avatar: null,
                 language: 'az'
             };
 
             // Save demo user
-            AurumStorage. set('current_user', this.currentUser);
+            AurumStorage.set('current_user', this.currentUser);
 
             console.log('✅ Demo user created:', this.currentUser.name);
             console.log('👤 User roles:', this.currentUser.roles);
@@ -118,7 +111,7 @@ class AurumApp {
     }
 
     /**
-     * Render premium header
+     * Render premium header with language switcher
      */
     renderHeader() {
         const headerContainer = document.getElementById('appHeader');
@@ -134,7 +127,7 @@ class AurumApp {
 
         // Safe language display
         const currentLang = this.i18n?.currentLanguage || 'az';
-        const langDisplay = currentLang.toUpperCase();
+        const langDisplay = this.getLanguageName(currentLang);
 
         // User info
         const userName = this.currentUser?.name || 'Admin User';
@@ -201,14 +194,14 @@ class AurumApp {
           </button>
 
           <!-- Language Switcher -->
-          <div class="app-header__language">
-            <button class="app-header__language-btn" id="languageSwitcher" type="button" aria-label="Change language">
+          <div class="app-header__language" id="languageSwitcherContainer">
+            <button class="app-header__language-btn" id="languageSwitcher" type="button" aria-label="Change language" aria-haspopup="true" aria-expanded="false">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10"/>
                 <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
                 <path d="M2 12h20"/>
               </svg>
-              <span class="app-header__language-label">${langDisplay}</span>
+              <span class="app-header__language-label" id="currentLanguageLabel">${langDisplay}</span>
               <svg class="app-header__language-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="m6 9 6 6 6-6"/>
               </svg>
@@ -242,20 +235,24 @@ class AurumApp {
     }
 
     /**
-     * Escape HTML
+     * Get language display name
      */
-    escapeHtml(text) {
-        if (!text) return '';
-        const div = document.createElement('div');
-        div.textContent = text;
-        return div.innerHTML;
+    getLanguageName(code) {
+        const names = {
+            'az': 'AZ',
+            'en': 'EN',
+            'ru':  'RU',
+            'tr': 'TR',
+            'de': 'DE'
+        };
+        return names[code] || code.toUpperCase();
     }
 
     /**
      * Get user initials for avatar
      */
     getUserInitials() {
-        if (!this.currentUser || !this.currentUser.name) return 'DU';
+        if (!this.currentUser || !this.currentUser.name) return 'AU';
 
         const names = this.currentUser.name.split(' ');
         if (names.length >= 2) {
@@ -271,9 +268,9 @@ class AurumApp {
         this.currentPage = document.body.dataset.page || 'dashboard';
 
         const pageTitles = {
-            'dashboard': 'Dashboard',
+            'dashboard':  'Dashboard',
             'chart-of-accounts': 'Chart of Accounts',
-            'journal':  'Journal Entries',
+            'journal': 'Journal Entries',
             'sales-invoices': 'Sales Invoices',
             'purchase-bills': 'Purchase Bills',
             'payments': 'Payments',
@@ -348,8 +345,9 @@ class AurumApp {
         // Language switcher
         const languageSwitcher = document.getElementById('languageSwitcher');
         if (languageSwitcher) {
-            languageSwitcher.addEventListener('click', () => {
-                this.showLanguageMenu();
+            languageSwitcher.addEventListener('click', (e) => {
+                e.stopPropagation();
+                this.toggleLanguageMenu();
             });
         }
 
@@ -363,62 +361,137 @@ class AurumApp {
     }
 
     /**
-     * Show language selection menu
+     * Toggle language selection menu
      */
-    showLanguageMenu() {
+    toggleLanguageMenu() {
+        const container = document.getElementById('languageSwitcherContainer');
+        const existingMenu = document.getElementById('languageMenu');
+
+        // If menu exists, close it
+        if (existingMenu) {
+            this.closeLanguageMenu();
+            return;
+        }
+
+        // Create menu
         const languages = [
-            { code: 'az', name: 'Azərbaycan' },
-            { code: 'en', name:  'English' },
-            { code: 'ru', name:  'Русский' },
-            { code:  'tr', name: 'Türkçe' },
-            { code: 'de', name: 'Deutsch' }
+            { code: 'az', name: 'Azərbaycan', flag: '🇦🇿' },
+            { code: 'en', name:  'English', flag: '🇬🇧' },
+            { code: 'ru', name: 'Русский', flag: '🇷🇺' },
+            { code: 'tr', name:  'Türkçe', flag: '🇹🇷' },
+            { code:  'de', name: 'Deutsch', flag: '🇩🇪' }
         ];
 
-        // Simple implementation - can be replaced with modal
-        const languageMenu = document.createElement('div');
-        languageMenu.className = 'language-menu';
-        languageMenu.innerHTML = languages.map(lang => `
+        const currentLang = this.i18n?.currentLanguage || 'az';
+
+        const menu = document.createElement('div');
+        menu.id = 'languageMenu';
+        menu.className = 'language-menu';
+        menu.setAttribute('role', 'menu');
+
+        menu.innerHTML = languages.map(lang => `
       <button 
-        class="language-menu__item ${lang.code === this.i18n.currentLanguage ? 'language-menu__item--active' :  ''}"
+        class="language-menu__item ${lang.code === currentLang ? 'language-menu__item--active' :  ''}"
         data-lang="${lang.code}"
+        role="menuitem"
+        type="button"
       >
-        ${lang.name}
+        <span class="language-menu__flag">${lang.flag}</span>
+        <span class="language-menu__name">${lang.name}</span>
+        ${lang.code === currentLang ?  '<svg class="language-menu__check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>' : ''}
       </button>
     `).join('');
 
-        // Position and show
+        container.appendChild(menu);
+
+        // Update aria-expanded
         const switcher = document.getElementById('languageSwitcher');
-        const rect = switcher.getBoundingClientRect();
-        languageMenu.style.position = 'fixed';
-        languageMenu.style.top = `${rect.bottom + 8}px`;
-        languageMenu.style.right = `${window.innerWidth - rect.right}px`;
+        if (switcher) {
+            switcher.setAttribute('aria-expanded', 'true');
+        }
 
-        document.body.appendChild(languageMenu);
+        // Animate in
+        requestAnimationFrame(() => {
+            menu.classList.add('language-menu--visible');
+        });
 
-        // Bind events
-        languageMenu.addEventListener('click', async (e) => {
+        // Bind click events
+        menu.addEventListener('click', (e) => {
             const btn = e.target.closest('[data-lang]');
             if (btn) {
                 const newLang = btn.dataset.lang;
-                await this.i18n.changeLanguage(newLang);
-
-                // Update header language label
-                document.querySelector('.app-header__language-label').textContent = newLang.toUpperCase();
-
-                // Remove menu
-                languageMenu.remove();
+                this.changeLanguage(newLang);
             }
         });
 
         // Close on outside click
         setTimeout(() => {
-            document.addEventListener('click', function closeMenu(e) {
-                if (!languageMenu.contains(e.target) && !switcher.contains(e.target)) {
-                    languageMenu.remove();
-                    document.removeEventListener('click', closeMenu);
-                }
-            });
+            document.addEventListener('click', this.closeLanguageMenuHandler);
         }, 100);
+    }
+
+    /**
+     * Close language menu
+     */
+    closeLanguageMenu() {
+        const menu = document.getElementById('languageMenu');
+        if (menu) {
+            menu.classList.remove('language-menu--visible');
+
+            setTimeout(() => {
+                menu.remove();
+
+                const switcher = document.getElementById('languageSwitcher');
+                if (switcher) {
+                    switcher.setAttribute('aria-expanded', 'false');
+                }
+            }, 200);
+        }
+
+        document.removeEventListener('click', this.closeLanguageMenuHandler);
+    }
+
+    /**
+     * Close menu handler
+     */
+    closeLanguageMenuHandler = (e) => {
+        const menu = document.getElementById('languageMenu');
+        const switcher = document.getElementById('languageSwitcher');
+
+        if (menu && ! menu.contains(e.target) && ! switcher.contains(e.target)) {
+            this.closeLanguageMenu();
+        }
+    }
+
+    /**
+     * Change application language
+     */
+    async changeLanguage(langCode) {
+        console.log(`🌐 Changing language to: ${langCode}`);
+
+        try {
+            // Change language in i18n
+            await this.i18n.changeLanguage(langCode);
+
+            // Update header label
+            const label = document.getElementById('currentLanguageLabel');
+            if (label) {
+                label.textContent = this.getLanguageName(langCode);
+            }
+
+            // Close menu
+            this.closeLanguageMenu();
+
+            // Dispatch custom event for app
+            window.dispatchEvent(new CustomEvent('app: langChanged', {
+                detail: { lang: langCode }
+            }));
+
+            console.log(`✅ Language changed to: ${langCode}`);
+
+        } catch (error) {
+            console.error('❌ Failed to change language:', error);
+        }
     }
 
     /**
@@ -436,22 +509,15 @@ class AurumApp {
 
         // Handle language change
         document.addEventListener('languageChanged', (e) => {
-            console.log('🌐 Language changed to:', e.detail.language);
+            console.log('🌐 Language changed event received:', e.detail.language);
         });
 
         // Handle keyboard shortcuts
         document.addEventListener('keydown', (e) => {
-            // Ctrl/Cmd + K - Focus search (if exists)
-            if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
-                e.preventDefault();
-                const searchInput = document.querySelector('[data-global-search]');
-                if (searchInput) {
-                    searchInput.focus();
-                }
-            }
-
-            // Escape - Close modals/dropdowns
+            // Escape - Close menus
             if (e.key === 'Escape') {
+                this.closeLanguageMenu();
+
                 document.querySelectorAll('.modal: not([hidden])').forEach(modal => {
                     modal.setAttribute('hidden', '');
                 });
@@ -461,23 +527,13 @@ class AurumApp {
         // Handle online/offline status
         window.addEventListener('online', () => {
             console.log('🌐 Connection restored');
-            this.showToast('Connection restored', 'success');
         });
 
         window.addEventListener('offline', () => {
             console.warn('⚠️ Connection lost');
-            this.showToast('No internet connection', 'warning');
         });
 
         console.log('✅ Global events bound');
-    }
-
-    /**
-     * Show toast notification
-     */
-    showToast(message, type = 'info') {
-        // Simple toast implementation
-        console.log(`[${type.toUpperCase()}] ${message}`);
     }
 
     /**
@@ -489,14 +545,14 @@ class AurumApp {
         container.innerHTML = `
       <div style="display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 2rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
         <div style="max-width: 600px; background: white; padding: 3rem; border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
-          <div style="text-align:  center; margin-bottom: 2rem;">
-            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#E17B77" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin:  0 auto;">
+          <div style="text-align: center; margin-bottom: 2rem;">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#E17B77" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin: 0 auto;">
               <circle cx="12" cy="12" r="10"/>
               <line x1="12" y1="8" x2="12" y2="12"/>
               <line x1="12" y1="16" x2="12.01" y2="16"/>
             </svg>
           </div>
-          <h1 style="font-size: 1.5rem; font-weight: 700; color: #1a202c; margin-bottom: 1rem; text-align: center;">
+          <h1 style="font-size: 1.5rem; font-weight: 700; color:  #1a202c; margin-bottom: 1rem; text-align: center;">
             Application Failed to Initialize
           </h1>
           <p style="color: #4a5568; margin-bottom: 1.5rem; text-align: center;">
@@ -512,6 +568,16 @@ class AurumApp {
         </div>
       </div>
     `;
+    }
+
+    /**
+     * Escape HTML
+     */
+    escapeHtml(text) {
+        if (!text) return '';
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
     }
 }
 

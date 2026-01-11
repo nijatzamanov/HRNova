@@ -5,6 +5,7 @@
 
 import { AurumI18n } from './i18n.js';
 import { AurumStorage } from './storage.js';
+import { RouteHelper } from './router.js';
 
 export class NavigationManager {
     constructor() {
@@ -456,29 +457,43 @@ export class NavigationManager {
     }
 
     /**
-     * Extract page identifier from route
+     * Extract page identifier from route using RouteHelper
      */
     getPageFromRoute(route) {
-        const match = route.match(/\/([^\/]+)\.php/);
-        return match ? match[1] : '';
+        return RouteHelper.getFilename(route);
     }
 
     /**
-     * Set active page based on current URL
+     * Set active page based on current URL using RouteHelper
      */
     setActivePage() {
-        const currentPath = window.location.pathname;
-        const currentPage = this.getPageFromRoute(currentPath);
+        // Get current page using router helper
+        const currentPage = RouteHelper.getCurrentPage();
+
+        // Also check data-page attribute
+        const dataPage = RouteHelper.getPageAttribute();
+
+        // Use data-page if available, otherwise use current page
+        const pageToMatch = dataPage || currentPage;
+
+        console.log('🎯 Setting active page:', {
+            currentPage,
+            dataPage,
+            pageToMatch
+        });
 
         // Remove all active states
         this.sidebarElement.querySelectorAll('.sidebar__link, .sidebar__sublink').forEach(link => {
             link.classList.remove('sidebar__link--active', 'sidebar__sublink--active');
         });
 
-        if (currentPage) {
-            const activeLink = this.sidebarElement.querySelector(`[data-page="${currentPage}"]`);
+        if (pageToMatch) {
+            // Find matching link by data-page attribute
+            const activeLink = this.sidebarElement.querySelector(`[data-page="${pageToMatch}"]`);
 
             if (activeLink) {
+                console.log('✅ Found active link:', activeLink);
+
                 // Check if it's a sub-link
                 if (activeLink.classList.contains('sidebar__sublink')) {
                     activeLink.classList.add('sidebar__sublink--active');
@@ -488,8 +503,10 @@ export class NavigationManager {
                     if (parentSubmenu) {
                         const submenuId = parentSubmenu.id;
 
+                        console.log('📂 Opening parent submenu:', submenuId);
+
                         // Open this sub-menu (close others due to accordion)
-                        this.openSubMenus.clear(); // Clear others
+                        this.openSubMenus.clear();
                         this.openSubMenus.add(submenuId);
 
                         parentSubmenu.classList.remove('sidebar__submenu--collapsed');
@@ -509,8 +526,11 @@ export class NavigationManager {
                 const group = activeLink.closest('.sidebar__group');
                 if (group && group.classList.contains('sidebar__group--collapsed')) {
                     const groupId = group.dataset.groupId;
+                    console.log('📂 Expanding parent group:', groupId);
                     this.expandGroup(groupId);
                 }
+            } else {
+                console.warn('⚠️ No matching navigation item found for page:', pageToMatch);
             }
         }
     }
@@ -776,6 +796,36 @@ export class NavigationManager {
             collapsedGroups: Array.from(this.collapsedGroups),
             openSubMenus: Array.from(this.openSubMenus)
         };
+    }
+
+    /**
+     * Debug route matching
+     */
+    debugRoutes() {
+        console.log('=== ROUTE DEBUG ===');
+        console.log('Router info:', RouteHelper.getDebugInfo());
+        console.log('\nNavigation items:');
+
+        if (this.navigation && this.navigation.groups) {
+            this.navigation.groups.forEach(group => {
+                console.log(`\nGroup: ${group.id}`);
+                group.items.forEach(item => {
+                    const routePage = RouteHelper.getFilename(item.route);
+                    const isActive = RouteHelper.isRouteActive(item.route);
+                    console.log(`  - ${item.id}:  ${item.route} → ${routePage} ${isActive ? '✓ ACTIVE' : ''}`);
+
+                    if (item.subItems) {
+                        item.subItems.forEach(sub => {
+                            const subRoutePage = RouteHelper.getFilename(sub.route);
+                            const subIsActive = RouteHelper.isRouteActive(sub.route);
+                            console.log(`    └─ ${sub.id}: ${sub.route} → ${subRoutePage} ${subIsActive ? '✓ ACTIVE' : ''}`);
+                        });
+                    }
+                });
+            });
+        }
+
+        console.log('\n===================');
     }
 }
 
